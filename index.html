@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Japan Family Travel Plan (June 22 → July 8)</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --link: #2563eb;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.35;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      h1 {
+        margin: 0 0 8px 0;
+        font-size: 28px;
+      }
+      .sub {
+        color: var(--muted);
+        margin-bottom: 18px;
+      }
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin: 14px 0;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 10px 0 10px 0;
+      }
+      h3 {
+        font-size: 16px;
+        margin: 12px 0 6px 0;
+      }
+      hr {
+        border: 0;
+        height: 1px;
+        background: var(--border);
+        margin: 18px 0;
+      }
+      ul {
+        margin: 8px 0 0 14px;
+        padding-left: 14px;
+      }
+      ul ul {
+        margin-left: 10px;
+        padding-left: 10px;
+      }
+      li {
+        margin: 3px 0;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+        background: #f9fafb;
+        border: 1px solid var(--border);
+        padding: 1px 6px;
+        border-radius: 999px;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .map-link {
+        margin-left: 6px;
+        font-size: 12px;
+        color: var(--muted);
+        border: 1px solid var(--border);
+        padding: 1px 6px;
+        border-radius: 999px;
+        background: #f9fafb;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .map-link:hover {
+        text-decoration: none;
+        border-color: #cbd5e1;
+      }
+      .small {
+        color: var(--muted);
+        font-size: 0.95em;
+      }
+      details {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 8px 12px;
+        margin: 10px 0;
+        background: #fff;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 650;
+      }
+      .tip {
+        background: #f8fafc;
+        border-left: 4px solid #2563eb;
+      }
+      .venue-inline {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin: 4px 0 2px 0;
+        justify-content: flex-start;
+      }
+      figure.venue {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        margin: 0;
+        max-width: 350px;
+        flex: 1 1 350px;
+      }
+      figure.venue img {
+        display: block;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        background: #f3f4f6;
+      }
+      figure.venue figcaption {
+        padding: 10px 12px;
+      }
+      figure.venue .name {
+        font-weight: 750;
+        margin: 0 0 4px 0;
+      }
+      figure.venue .desc {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95em;
+      }
+      .carousel {
+        position: relative;
+        width: 100%;
+        height: 220px;
+        background: #f3f4f6;
+      }
+      .carousel img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 180ms ease;
+        z-index: 1;
+      }
+      .carousel img.is-active {
+        opacity: 1;
+      }
+      .carousel .nav {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 6px;
+        pointer-events: auto;
+        z-index: 5;
+      }
+      .carousel button {
+        pointer-events: auto;
+        border: none;
+        background: transparent;
+        color: #ffffff;
+        border-radius: 10px;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        font-size: 22px;
+        font-weight: 800;
+        backdrop-filter: blur(2px);
+      }
+      .carousel button:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+      .carousel .dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 8px;
+        display: flex;
+        gap: 6px;
+        justify-content: center;
+        pointer-events: none;
+        z-index: 4;
+      }
+      .carousel .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: rgba(17, 24, 39, 0.25);
+        pointer-events: none;
+      }
+      .carousel .dot.is-active {
+        background: rgba(17, 24, 39, 0.75);
+      }
+      .route-card {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 10px 12px;
+        margin: 10px 0;
+        background: #fff;
+      }
+      .route-head {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+      .route-title {
+        font-weight: 750;
+      }
+      .pill {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: #f9fafb;
+        color: var(--muted);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+      .map-embed {
+        width: 100%;
+        height: 260px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+      }
+      .tips {
+        margin-top: 10px;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #fcfcfd;
+      }
+      .tips h4 {
+        margin: 0 0 6px 0;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .tips ul {
+        margin-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Japan Family Travel Plan (June 22 → July 8)</h1>
+      <div class="sub">Bases assumed fixed: <strong>Grand Nikko Tokyo Bay Maihama</strong> + <strong>The Park Front Hotel (USJ)</strong>. Kids pacing: ages <code>10, 8, 1</code>.</div>
+
+      <div class="card">
+        <h2>Trip at a Glance</h2>
+        <ul>
+          <li>Bases:
+            <ul>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=Grand+Nikko+Tokyo+Bay+Maihama" target="_blank" rel="noopener noreferrer">Grand Nikko Tokyo Bay Maihama</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">The Park Front Hotel</a> (Universal Studios Japan)</li>
+            </ul>
+          </li>
+          <li>Travel structure:
+            <ul>
+              <li><strong>Tokyo base:</strong> June 23–27</li>
+              <li><strong>Travel day:</strong> June 28</li>
+              <li><strong>Osaka base:</strong> June 28–July 8</li>
+            </ul>
+          </li>
+          <li>Theme parks included:
+            <ul>
+              <li>1 day <a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Tokyo Disneyland</a></li>
+              <li>2 days <a href="https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Tokyo DisneySea</a></li>
+              <li>2 days <a href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Universal Studios Japan</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <!-- Venue photo gallery removed; images are now placed in their corresponding days. -->
+      </div>
+
+      <hr />
+
+      <script>
+        // If an external image is blocked, replace it with a local (offline) SVG placeholder
+        // so the page remains visually scannable.
+        function venueImgError(img) {
+          const label = img.getAttribute("alt") || "Venue";
+          const w = 1200;
+          const h = 750;
+          const bg = "#f3f4f6";
+          const border = "#e5e7eb";
+          const text = "#374151";
+          const sub = "#6b7280";
+
+          const safe = (s) =>
+            String(s)
+              .replaceAll("&", "&amp;")
+              .replaceAll("<", "&lt;")
+              .replaceAll(">", "&gt;")
+              .replaceAll('"', "&quot;")
+              .replaceAll("'", "&#39;");
+
+          const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+  <rect width="${w}" height="${h}" fill="${bg}"/>
+  <rect x="18" y="18" width="${w - 36}" height="${h - 36}" rx="28" fill="#ffffff" stroke="${border}" stroke-width="4"/>
+  <text x="60" y="120" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
+        font-size="48" font-weight="750" fill="${text}">${safe(label)}</text>
+  <text x="60" y="175" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
+        font-size="28" fill="${sub}">Photo blocked or unavailable (offline placeholder)</text>
+</svg>`;
+
+          img.onerror = null; // prevent loops
+          img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+        }
+      </script>
+
+      <script>
+        // Turn each single venue image into a carousel with multiple (unique) PNGs.
+        // Use:
+        //   slide 1: <name>.<ext>
+        //   slide 2+: <name>-<i>.<ext> (so i=2 => -2, i=3 => -3, etc.)
+        document.addEventListener("DOMContentLoaded", () => {
+          const figures = Array.from(document.querySelectorAll("figure.venue"));
+          const MAX_SLIDES = 4;
+
+          figures.forEach((fig) => {
+            const img = fig.querySelector("img");
+            if (!img) return;
+            if (fig.querySelector(".carousel")) return;
+
+            const src1 = img.getAttribute("src") || "";
+            if (!src1) return;
+
+            const alt = img.getAttribute("alt") || "Venue";
+            const match = src1.match(/\.(svg|png|jpe?g|webp)$/i);
+            if (!match) return;
+            const ext = match[1].toLowerCase();
+            const srcBase = src1.replace(/\.(svg|png|jpe?g|webp)$/i, "");
+
+            const carousel = document.createElement("div");
+            carousel.className = "carousel";
+
+            const slides = [];
+            for (let i = 1; i <= MAX_SLIDES; i++) {
+              const s = document.createElement("img");
+              s.alt = alt;
+              // Use:
+              //   - slide 1:  <name>.<ext>
+              //   - slide 2+: <name>-<i>.<ext>  (so i=2 => -2, i=3 => -3, etc.)
+              s.src = i === 1 ? `${srcBase}.${ext}` : `${srcBase}-${i}.${ext}`;
+              s.onerror = () => venueImgError(s); // offline placeholder if a variant is missing
+              if (i === 1) s.classList.add("is-active");
+              slides.push(s);
+              carousel.appendChild(s);
+            }
+
+            const nav = document.createElement("div");
+            nav.className = "nav";
+
+            const prev = document.createElement("button");
+            prev.type = "button";
+            prev.setAttribute("aria-label", "Previous image");
+            prev.textContent = "‹";
+
+            const next = document.createElement("button");
+            next.type = "button";
+            next.setAttribute("aria-label", "Next image");
+            next.textContent = "›";
+
+            nav.appendChild(prev);
+            nav.appendChild(next);
+
+            const dots = document.createElement("div");
+            dots.className = "dots";
+            const dotEls = [];
+            for (let i = 0; i < MAX_SLIDES; i++) {
+              const d = document.createElement("span");
+              d.className = i === 0 ? "dot is-active" : "dot";
+              dotEls.push(d);
+              dots.appendChild(d);
+            }
+
+            let idx = 0;
+            const set = (n) => {
+              idx = ((n % MAX_SLIDES) + MAX_SLIDES) % MAX_SLIDES;
+              slides.forEach((s, i) => {
+                s.classList.toggle("is-active", i === idx);
+              });
+              dotEls.forEach((d, i) => {
+                d.classList.toggle("is-active", i === idx);
+              });
+            };
+
+            prev.addEventListener("click", () => set(idx - 1));
+            next.addEventListener("click", () => set(idx + 1));
+
+            // Ensure initial state is consistent even if classes differ by browser caching.
+            set(0);
+
+            carousel.appendChild(nav);
+            carousel.appendChild(dots);
+
+            // Replace the single <img> with the carousel.
+            img.replaceWith(carousel);
+          });
+        });
+      </script>
+
+      <script>
+        // Chrome blocks many iframe embeds (like Google Maps) on file:// pages because each file
+        // is treated as a unique security origin. If opened as file://, hide the iframes and keep
+        // the clickable "Open in Maps" links instead.
+        document.addEventListener("DOMContentLoaded", () => {
+          if (window.location && window.location.protocol === "file:") {
+            document.querySelectorAll("iframe.map-embed").forEach((el) => {
+              el.style.display = "none";
+              const note = document.createElement("div");
+              note.className = "small";
+              note.style.marginTop = "8px";
+              note.textContent =
+                "Map embed disabled in file:// view. Open this HTML via a local web server (http://localhost) to enable embeds.";
+              el.parentElement?.insertBefore(note, el.nextSibling);
+            });
+          }
+        });
+      </script>
+
+      <script>
+        // Convert Google Maps "place" links into "info" links, and keep Maps as a secondary pill.
+        // - Primary link: Google Search (info about the place)
+        // - Secondary link: Map (original Google Maps search URL)
+        document.addEventListener("DOMContentLoaded", () => {
+          const MAPS_PREFIX = "https://www.google.com/maps/search/?api=1&query=";
+          const anchors = Array.from(document.querySelectorAll(`a[href^="${MAPS_PREFIX}"]`));
+
+          anchors.forEach((a) => {
+            const originalHref = a.getAttribute("href") || "";
+            if (!originalHref.startsWith(MAPS_PREFIX)) return;
+
+            // Skip if we already processed this anchor
+            if (a.dataset && a.dataset.infoLinked === "1") return;
+
+            const queryPart = originalHref.slice(MAPS_PREFIX.length);
+            const place = decodeURIComponent(queryPart.replaceAll("+", " "));
+
+            // Make the main anchor an "info" link
+            a.href = `https://www.google.com/search?q=${encodeURIComponent(place)}&hl=en`;
+            a.title = `Info: ${place}`;
+            a.dataset.infoLinked = "1";
+
+            // Add a small "Map" pill next to it
+            const map = document.createElement("a");
+            map.className = "map-link";
+            map.textContent = "Map";
+            map.href = originalHref;
+            map.target = "_blank";
+            map.rel = "noopener noreferrer";
+            map.title = `Map: ${place}`;
+
+            // Insert right after the anchor (if not already present)
+            const next = a.nextSibling;
+            if (next && next.nodeType === Node.ELEMENT_NODE && next.classList && next.classList.contains("map-link")) {
+              return;
+            }
+            a.parentNode?.insertBefore(map, a.nextSibling);
+          });
+        });
+      </script>
+
+      <details open>
+        <summary>Monday — June 22: Fly to Japan (travel day only)</summary>
+        <h3>Plan</h3>
+        <ul>
+          <li>Fly + jet lag management (no sightseeing planned in this itinerary since you arrive in Japan on Tuesday).</li>
+          <li>Bring kid “survival kits”: snacks, wipes, small toys/books, and a spare outfit.</li>
+          <li>Pre-plan tomorrow: set out a simple outfit + one quick “if energy allows” option for Tuesday evening.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Tuesday — June 23: Arrive NRT 14:55 → Hotel (Maihama) + easy evening</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Grand Nikko Tokyo Bay Maihama" src="assets/venues/grand-nikko-tokyo-bay-maihama.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Grand+Nikko+Tokyo+Bay+Maihama" target="_blank" rel="noopener noreferrer">Grand Nikko Tokyo Bay Maihama</a></div>
+              <p class="desc">Your Tokyo base in the Maihama/Disney area—ideal for an easy arrival evening.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Arrival timing</h3>
+        <ul>
+          <li>Arrive: <strong>Narita (NRT)</strong> at <strong>14:55</strong> (Tuesday, June 23).</li>
+          <li>Typical NRT → hotel door-to-door: <strong>~75–120 min</strong> (longer in rush hour or with multiple transfers).</li>
+          <li>Plan for: immigration + bags + kids + restroom breaks = <strong>~45–90 min</strong> at the airport.</li>
+        </ul>
+        <h3>Getting to the hotel (family-friendly options)</h3>
+        <ul>
+          <li><strong>Option A (easiest with kids): Airport Limousine Bus</strong>
+            <ul>
+              <li>Take a Limousine Bus from <code>NRT</code> to the <code>Tokyo Disney Resort / Maihama</code> area.</li>
+              <li>Then short taxi/shuttle/walk to <strong>Grand Nikko Tokyo Bay Maihama</strong> (depending on drop-off).</li>
+              <li>Time: typically <strong>~60–90 min</strong> on the bus + last-mile.</li>
+            </ul>
+          </li>
+          <li><strong>Option B (reliable rail): Narita Express + JR</strong>
+            <ul>
+              <li><code>Narita Express (N'EX)</code> → <code>Tokyo Station</code></li>
+              <li><code>JR Keiyo/Musashino Line</code> → <code>Maihama Station</code></li>
+              <li>Taxi/local shuttle to the hotel.</li>
+              <li>Time: typically <strong>~75–110 min</strong> + transfers/waits.</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="route-card">
+          <div class="route-head">
+            <div class="route-title">Route map (NRT → hotel)</div>
+            <div class="pill">Typical: 75–120 min door-to-door</div>
+          </div>
+          <iframe
+            class="map-embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=Narita+International+Airport&daddr=Grand+Nikko+Tokyo+Bay+Maihama"
+            title="Narita International Airport to Grand Nikko Tokyo Bay Maihama"
+          ></iframe>
+          <div class="small" style="margin-top: 8px">
+            Open in Maps:
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Narita+International+Airport&destination=Grand+Nikko+Tokyo+Bay+Maihama" target="_blank" rel="noopener noreferrer">directions link</a>.
+          </div>
+        </div>
+        <h3>Optional stretch (Skytree + Asakusa, only if you have energy)</h3>
+        <ul>
+          <li><strong>Time check:</strong> with an NRT landing at <strong>14:55</strong>, aim to be checked into the hotel roughly by <strong>17:30–18:30</strong>. Only do this if you can start the outing by <strong>~18:30</strong> at the latest.</li>
+          <li>Short Skytree Town loop (aim <strong>60–90 min</strong> total).</li>
+          <li>If you want one indoor stop: <a href="https://www.google.com/maps/search/?api=1&query=Sumida+Aquarium" target="_blank" rel="noopener noreferrer">Sumida Aquarium</a> (~<strong>45–90 min</strong>).</li>
+          <li>Quick Nakamise Street snack stroll in Asakusa (~<strong>30–45 min</strong>), then head back early.</li>
+          <li>If kids get tired, skip this and stay in the hotel/Ikspiari area.</li>
+        </ul>
+        <h3>Easy evening ideas (low-effort)</h3>
+        <ul>
+          <li>Dinner + stretch: <a href="https://www.google.com/maps/search/?api=1&query=Ikspiari" target="_blank" rel="noopener noreferrer">Ikspiari</a> (~<strong>1–2 hours</strong>) only if you’re checked in and everyone has energy (best start <strong>~18:00</strong>).</li>
+          <li>Prep for the next morning: set out clothes, charge batteries, pack a small day bag.</li>
+        </ul>
+        <div class="tips">
+          <h4>Family of 6 tips</h4>
+          <ul>
+            <li>On arrival day, prioritize <strong>food + showers + early sleep</strong> over sightseeing.</li>
+            <li>Have one adult handle tickets/transport while another focuses on kids/bathrooms.</li>
+            <li>Keep one small “airport bag” accessible: wipes, snacks, spare clothes, chargers.</li>
+          </ul>
+          <h4>Hotel/area tips</h4>
+          <ul>
+            <li>If you use rail, aim to reach <code>Maihama</code> before dinner time to avoid late-night transfers.</li>
+            <li>Consider luggage forwarding for easier station navigation with kids.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Wednesday — June 24: Tokyo Disneyland (full park day)</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Tokyo Disneyland" src="assets/venues/tokyo-disneyland.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Tokyo Disneyland</a></div>
+              <p class="desc">Big classic Disney rides + shows (built for family rotations).</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Everything is inside <code>Tokyo Disneyland</code> (easy to cluster attractions).</li>
+          <li>Hotel → Disneyland: typically <strong>~10–25 min</strong> door-to-door from the Maihama area.</li>
+          <li>Park time budget: <strong>~7–10 hours</strong>.</li>
+          <li>Tip: arrive <strong>30–60 min</strong> before opening to reduce the earliest queues.</li>
+        </ul>
+        <div class="route-card">
+          <div class="route-head">
+            <div class="route-title">Route map (Maihama base → Tokyo Disneyland)</div>
+            <div class="pill">Now nearby (Maihama base)</div>
+          </div>
+          <iframe
+            class="map-embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=Grand+Nikko+Tokyo+Bay+Maihama&daddr=Tokyo+Disneyland"
+            title="Grand Nikko Tokyo Bay Maihama to Tokyo Disneyland"
+          ></iframe>
+          <div class="small" style="margin-top: 8px">
+            Open in Maps:
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Grand+Nikko+Tokyo+Bay+Maihama&destination=Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">directions link</a>.
+          </div>
+        </div>
+        <h3>Disneyland priorities (family-friendly rotation)</h3>
+        <ul>
+          <li>Older-kid headliners: <code>Big Thunder Mountain</code>, <code>Indiana Jones Adventure</code>, <code>Pirates of the Caribbean</code>.</li>
+          <li>Show + break strategy: pick <strong>1 parade/show</strong> and treat it as your daily reset.</li>
+        </ul>
+        <h3>Parent rotation suggestion</h3>
+        <ul>
+          <li>2 adults rotate between big rides while another handles snacks/stroller and a backup indoor option.</li>
+          <li>Use the toddler's rest window for the longest queue attraction first.</li>
+        </ul>
+        <div class="tips">
+          <h4>Family of 6 tips</h4>
+          <ul>
+            <li>Stroller + baby basics: pack wipes and a spare outfit for the quick messy moments.</li>
+            <li>Meal timing: aim for a sit-down meal slightly before the main lunch rush to avoid long lines with a 1-year-old.</li>
+            <li>Hydration & shade: take micro-breaks every ~90 minutes.</li>
+          </ul>
+          <h4>Venue tips (Disneyland)</h4>
+          <ul>
+            <li>If crowds are heavy, do a "land loop": go where you can move fastest, then lock in your show/parade time.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Thursday — June 25: Tokyo DisneySea Day 1</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Tokyo DisneySea" src="assets/venues/tokyo-disneysea.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Tokyo DisneySea</a></div>
+              <p class="desc">Two-day plan with strong indoor options (Mermaid Lagoon) for rain breaks.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Everything is inside <code>Tokyo DisneySea</code> (minimal travel between attractions).</li>
+          <li>Hotel → DisneySea: typically <strong>~10–20 min</strong> door-to-door from the Maihama area.</li>
+          <li>Park time budget: <strong>~7–9 hours</strong>.</li>
+          <li>Tip: arrive <strong>30–60 min</strong> before opening to reduce the longest queues.</li>
+        </ul>
+        <div class="route-card">
+          <div class="route-head">
+            <div class="route-title">Route map (30+ min commute)</div>
+            <div class="pill">Now nearby (Maihama base)</div>
+          </div>
+          <iframe
+            class="map-embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=Grand+Nikko+Tokyo+Bay+Maihama&daddr=Tokyo+DisneySea"
+            title="Grand Nikko Tokyo Bay Maihama to Tokyo DisneySea"
+          ></iframe>
+          <div class="small" style="margin-top: 8px">
+            Open in Maps:
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Grand+Nikko+Tokyo+Bay+Maihama&destination=Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">directions link</a>.
+          </div>
+        </div>
+        <h3>DisneySea priorities</h3>
+        <ul>
+          <li><code>Journey to the Center of the Earth</code> (~<strong>20–45 min</strong> incl. waits)</li>
+          <li><code>Nemo & Friends SeaRider</code> (~<strong>20–40 min</strong> incl. waits)</li>
+          <li><code>Toy Story Mania</code> (~<strong>15–35 min</strong> incl. waits)</li>
+          <li><code>Mermaid Lagoon</code> indoor play (~<strong>45–75 min</strong>) — excellent for rain/cooler breaks</li>
+        </ul>
+        <h3>Parent rotation suggestion</h3>
+        <ul>
+          <li><code>Indiana Jones</code> (~<strong>20–45 min</strong> incl. waits)</li>
+          <li><code>Tower of Terror</code> (~<strong>20–45 min</strong> incl. waits)</li>
+        </ul>
+        <div class="tips">
+          <h4>Family of 6 tips</h4>
+          <ul>
+            <li>Pick one <strong>indoor anchor</strong> (Mermaid Lagoon) for naps, feeding, and rain breaks.</li>
+            <li>Use a <strong>two-adult rotation</strong>: 2 adults do a big ride while others do a kid zone, then swap.</li>
+            <li>Keep a <strong>mobile battery</strong> per parent for maps, tickets, and photos.</li>
+          </ul>
+          <h4>Venue tips (DisneySea)</h4>
+          <ul>
+            <li>Prioritize the one attraction with the longest typical waits early, then fill with shorter queues.</li>
+            <li>Rain plan: Mermaid Lagoon + indoor shows first; save outdoor areas for gaps in weather.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Friday — June 26: Tokyo DisneySea Day 2 (relaxed pace)</summary>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Still an in-park day; keep it a bit lighter than Day 1.</li>
+          <li>Park time budget: <strong>~6.5–8.5 hours</strong> with a rest break.</li>
+        </ul>
+        <h3>Focus areas missed</h3>
+        <ul>
+          <li><code>Arabian Coast</code></li>
+          <li><code>Mediterranean Harbor</code></li>
+          <li><code>Aquatopia</code></li>
+        </ul>
+        <h3>Lunch</h3>
+        <ul>
+          <li><code>Volcano Restaurant</code> (easy seating, ~<strong>60–90 min</strong> incl. a calm meal)</li>
+        </ul>
+        <h3>Evening</h3>
+        <ul>
+          <li>Early return recommended; rest night (aim back to hotel by <strong>~7–8pm</strong>).</li>
+        </ul>
+        <div class="tips">
+          <h4>Family of 6 tips</h4>
+          <ul>
+            <li>Make this the <strong>photo + wandering</strong> day—less rushing, more breaks.</li>
+            <li>Let each older kid pick <strong>one “must-do”</strong> to keep everyone invested without over-scheduling.</li>
+          </ul>
+          <h4>Venue tips</h4>
+          <ul>
+            <li>If weather is bad, focus on the most covered/indoor areas and do shops last.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Saturday — June 27: Odaiba + teamLab + Gundam</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Odaiba Seaside Park" src="assets/venues/odaiba-seaside-park.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Odaiba+Seaside+Park" target="_blank" rel="noopener noreferrer">Odaiba Seaside Park</a></div>
+              <p class="desc">Easy waterfront stretch + sunset-style atmosphere.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Odaiba is a “loop” day: close stops by walk/short local transit.</li>
+          <li>Time budget: <strong>~6–8 hours</strong> (teamLab sets the pace).</li>
+        </ul>
+        <h3>Plan</h3>
+        <ul>
+          <li>Walk from hotel: allow <strong>5–10 min</strong> to the first attraction.</li>
+          <li><code>teamLab Planets TOKYO</code> — allow <strong>90–120 min</strong> (entry + breaks).</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Odaiba+Seaside+Park" target="_blank" rel="noopener noreferrer">DiverCity Tokyo Plaza</a> / life-size <code>Gundam</code> area: travel between stops ~<strong>10–15 min</strong> walk; time budget <strong>45–60 min</strong>.</li>
+          <li>Indoor backup (if needed): <code>Legoland Discovery Center Tokyo</code> (~<strong>60–120 min</strong>).</li>
+          <li>Sunset walk: <a href="https://www.google.com/maps/search/?api=1&query=Odaiba+Seaside+Park" target="_blank" rel="noopener noreferrer">Odaiba Seaside Park</a> (~<strong>30–45 min</strong>).</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Sunday — June 28: Shibuya + Harajuku + Meiji Shrine (buffer day)</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Shibuya Crossing" src="assets/venues/shibuya-crossing.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+Crossing" target="_blank" rel="noopener noreferrer">Shibuya Crossing</a></div>
+              <p class="desc">High-energy Tokyo landmark and easy “first Shibuya” stop.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Meiji Shrine" src="assets/venues/meiji-shrine.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Meiji+Shrine" target="_blank" rel="noopener noreferrer">Meiji Shrine</a></div>
+              <p class="desc">Calm forest walk—great stroller-friendly reset after Shibuya.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Shibuya Sky" src="assets/venues/shibuya-sky.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+Sky" target="_blank" rel="noopener noreferrer">Shibuya Sky</a></div>
+              <p class="desc">Observation views that usually work well for older kids.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Yoyogi Park" src="assets/venues/yoyogi-park.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Yoyogi+Park" target="_blank" rel="noopener noreferrer">Yoyogi Park</a></div>
+              <p class="desc">Open green space—ideal as a low-stress park option.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Compact cluster: <code>Shibuya → Harajuku → Meiji Shrine</code>.</li>
+          <li>Transit between stops: <strong>10–30 min</strong> each hop (mostly train + short walks).</li>
+          <li>Day length: <strong>~7–9 hours</strong>.</li>
+        </ul>
+        <h3>Travel</h3>
+        <ul>
+          <li>Typical hotel → Shibuya commute: <strong>~35–55 min</strong> door-to-door.</li>
+        </ul>
+        <div class="route-card">
+          <div class="route-head">
+            <div class="route-title">Route map (30+ min commute)</div>
+            <div class="pill">Typical: 35–55 min</div>
+          </div>
+          <iframe
+            class="map-embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=Grand+Nikko+Tokyo+Bay+Maihama&daddr=Shibuya+Crossing"
+            title="Grand Nikko Tokyo Bay Maihama to Shibuya"
+          ></iframe>
+          <div class="small" style="margin-top: 8px">
+            Open in Maps:
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Grand+Nikko+Tokyo+Bay+Maihama&destination=Shibuya+Crossing" target="_blank" rel="noopener noreferrer">directions link</a>.
+          </div>
+        </div>
+        <h3>Morning</h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+Crossing" target="_blank" rel="noopener noreferrer">Shibuya Crossing</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Hachiko+Statue" target="_blank" rel="noopener noreferrer">Hachiko Statue</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+Sky" target="_blank" rel="noopener noreferrer">Shibuya Sky</a> (~<strong>45–90 min</strong> incl. entry window + viewing; book ahead)</li>
+        </ul>
+        <h3>Lunch</h3>
+        <ul>
+          <li><code>Shibuya Parco</code> food hall (plan <strong>~60–90 min</strong> incl. kids/snacks)</li>
+        </ul>
+        <h3>Afternoon</h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Meiji+Shrine" target="_blank" rel="noopener noreferrer">Meiji Shrine</a> (~<strong>60–90 min</strong>)</li>
+          <li>Then <a href="https://www.google.com/maps/search/?api=1&query=Harajuku" target="_blank" rel="noopener noreferrer">Harajuku</a> (~<strong>45–90 min</strong>)</li>
+          <li>Snacks: <code>crepes</code>, <code>cotton candy</code></li>
+          <li>
+            Optional cafe stop: <a href="https://www.google.com/maps/search/?api=1&query=Owl+Cafe+Akiba+Fukurou" target="_blank" rel="noopener noreferrer">Owl Cafe Akiba Fukurou (Akihabara)</a>
+            (~<strong>60–90 min</strong>; book/check age rules ahead).
+          </li>
+          <li>
+            Optional cafe upgrade: <a href="https://www.google.com/maps/search/?api=1&query=Starbucks+Reserve+Roastery+Tokyo" target="_blank" rel="noopener noreferrer">Starbucks Reserve Roastery Tokyo</a>
+            (a “wow” coffee experience; ~<strong>60–90 min</strong>).
+          </li>
+        </ul>
+        <h3>Evening option (kids + parent rotation)</h3>
+        <ul>
+          <li>
+            Kids dinner: <a href="https://www.google.com/maps/search/?api=1&query=Ichiran+Shibuya" target="_blank" rel="noopener noreferrer">Ichiran ramen (Shibuya)</a>
+            (~<strong>45–75 min</strong>; fast ordering, easy with kids).
+          </li>
+          <li>
+            Parent rotation dinner: <a href="https://www.google.com/maps/search/?api=1&query=Sushi+Sakaba+Fujiyama+Tokyo+Akihabara" target="_blank" rel="noopener noreferrer">Sushi Sakaba Fujiyama (all-you-can-eat sushi)</a>
+            (~<strong>90–120 min</strong>).
+          </li>
+          <li>
+            Optional adult-only break: <a href="https://www.google.com/maps/search/?api=1&query=love+hotel+Shinjuku" target="_blank" rel="noopener noreferrer">love hotel near Shinjuku/Shibuya</a>
+            (choose an adult-only room for a reset).
+          </li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Nonbei+Yokocho" target="_blank" rel="noopener noreferrer">Nonbei Yokocho</a> (~<strong>60–120 min</strong>)</li>
+        </ul>
+        <div class="tips">
+          <h4>Family of 6 tips</h4>
+          <ul>
+            <li>Avoid the biggest crowds by aiming for <strong>late morning</strong> for Shibuya Sky and <strong>early afternoon</strong> for Meiji Shrine.</li>
+            <li>Stroller strategy: use elevators in stations when available; keep a <strong>light rain cover</strong> handy.</li>
+            <li>Snack plan: buy one “safe snack” per kid early so you’re not searching mid-meltdown.</li>
+          </ul>
+          <h4>Venue tips</h4>
+          <ul>
+            <li>Meiji Shrine is a great <strong>cool-down</strong> after Shibuya—pace it as your quiet reset.</li>
+            <li>Harajuku streets can be tight; if it’s busy, do a shorter loop and leave before peak.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Monday — June 29: Shinkansen to Osaka + check-in</summary>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Long-distance leg first; that night’s activities are near <code>Universal City</code> / <code>CityWalk</code>.</li>
+          <li>Overnight travel day total: <strong>~5–7 hours door-to-door</strong> (plus check-in time).</li>
+        </ul>
+        <h3>Ride</h3>
+        <ul>
+          <li><code>Tokaido Shinkansen</code></li>
+          <li><code>Tokyo Station → Shin-Osaka Station</code> (~<strong>2.5 hours</strong>)</li>
+          <li>Reserve seats with luggage space.</li>
+        </ul>
+        <h3>Evening</h3>
+        <ul>
+          <li>Check into <a href="https://www.google.com/maps/search/?api=1&query=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">The Park Front Hotel</a>.</li>
+          <li>Shin-Osaka → USJ/Hotel area: typically <strong>~20–30 min</strong>.</li>
+          <li>Walk: <a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Universal CityWalk Osaka</a> and dinner (~<strong>1.5–2.5 hours</strong> total).</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Tuesday — June 30: Kyoto historic district day</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Kiyomizu-dera" src="assets/venues/kiyomizu-dera.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera" target="_blank" rel="noopener noreferrer">Kiyomizu-dera</a></div>
+              <p class="desc">Higashiyama temple with classic Kyoto streets nearby.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Focused on <code>Higashiyama</code>: <code>Kiyomizu-dera</code> + <code>Sannenzaka/Ninenzaka</code> (close to each other).</li>
+          <li>Optional <code>Fushimi Inari</code> is NOT in the same immediate area (only if energy/time allows).</li>
+          <li>Train (USJ/Osaka area → Kyoto): ~<strong>45 min</strong>; door-to-door often <strong>~60–75 min</strong>.</li>
+        </ul>
+        <div class="route-card">
+          <div class="route-head">
+            <div class="route-title">Route map (30+ min commute)</div>
+            <div class="pill">Typical: 60–75 min door-to-door</div>
+          </div>
+          <iframe
+            class="map-embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=The+Park+Front+Hotel+Universal+Studios+Japan&daddr=Kiyomizu-dera"
+            title="The Park Front Hotel to Kiyomizu-dera"
+          ></iframe>
+          <div class="small" style="margin-top: 8px">
+            Open in Maps:
+            <a href="https://www.google.com/maps/dir/?api=1&origin=The+Park+Front+Hotel+Universal+Studios+Japan&destination=Kiyomizu-dera" target="_blank" rel="noopener noreferrer">directions link</a>.
+          </div>
+        </div>
+        <h3>Visits</h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera" target="_blank" rel="noopener noreferrer">Kiyomizu-dera</a> — time budget ~<strong>1.5–2.5 hours</strong> (viewpoints + stairs)</li>
+          <li>Walk to <a href="https://www.google.com/maps/search/?api=1&query=Sannenzaka" target="_blank" rel="noopener noreferrer">Sannenzaka</a> + <a href="https://www.google.com/maps/search/?api=1&query=Ninenzaka" target="_blank" rel="noopener noreferrer">Ninenzaka</a> — combined ~<strong>60–90 min</strong></li>
+        </ul>
+        <h3>Optional parent-rotation hike</h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha" target="_blank" rel="noopener noreferrer">Fushimi Inari Taisha</a> (~<strong>2–3 hours</strong> total incl. queues/stairs). Stroller note: lots of stairs/steep sections.</li>
+        </ul>
+        <div class="tips">
+          <h4>Family of 6 tips</h4>
+          <ul>
+            <li>Plan a <strong>Kyoto “last mile”</strong>: consider taxi for the final stretch if kids are tired (Kyoto buses can be crowded).</li>
+            <li>Start earlier than you think—stairs + heat + crowds add time fast with little ones.</li>
+            <li>Carry a small <strong>hand towel</strong> and a change of clothes for the toddler (summer humidity + snacks).</li>
+          </ul>
+          <h4>Venue tips (Higashiyama)</h4>
+          <ul>
+            <li>Sannenzaka/Ninenzaka are best as a slow “snack walk.” Keep a firm hand on little kids—sloped paths.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Wednesday — July 1: Nara deer day</summary>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Main stops are in/around <code>Nara Park</code>, so it’s very walkable.</li>
+          <li>Time budget: <strong>~6–8 hours</strong>.</li>
+          <li>Osaka → Nara: usually <strong>~45–60 min</strong> (door-to-door can be <strong>~60–75 min</strong>).</li>
+        </ul>
+        <div class="route-card">
+          <div class="route-head">
+            <div class="route-title">Route map (30+ min commute)</div>
+            <div class="pill">Typical: 60–75 min door-to-door</div>
+          </div>
+          <iframe
+            class="map-embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=The+Park+Front+Hotel+Universal+Studios+Japan&daddr=Nara+Park"
+            title="The Park Front Hotel to Nara Park"
+          ></iframe>
+          <div class="small" style="margin-top: 8px">
+            Open in Maps:
+            <a href="https://www.google.com/maps/dir/?api=1&origin=The+Park+Front+Hotel+Universal+Studios+Japan&destination=Nara+Park" target="_blank" rel="noopener noreferrer">directions link</a>.
+          </div>
+        </div>
+        <h3>Plan</h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Nara+Park" target="_blank" rel="noopener noreferrer">Nara Park</a> — feed deer (~<strong>1.5–2.5 hours</strong>)</li>
+          <li>Then <a href="https://www.google.com/maps/search/?api=1&query=Todai-ji" target="_blank" rel="noopener noreferrer">Todai-ji</a> — ~<strong>60–90 min</strong></li>
+        </ul>
+        <div class="tips">
+          <h4>Family of 6 tips</h4>
+          <ul>
+            <li>Set a rule: <strong>one deer cracker pack at a time</strong> (helps avoid getting swarmed).</li>
+            <li>Bring wipes/sanitizer—kids will touch everything.</li>
+          </ul>
+          <h4>Venue tips (Nara)</h4>
+          <ul>
+            <li>Deer can head-butt for food—keep crackers in a bag and teach kids to step back.</li>
+            <li>Todai-ji is impressive but can feel long—plan a snack break immediately after.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary>July 2: Osaka Castle + Dotonbori</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Osaka Castle" src="assets/venues/osaka-castle.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank" rel="noopener noreferrer">Osaka Castle</a></div>
+              <p class="desc">Big grounds + picnic-friendly lawns; good daytime anchor.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Dotonbori" src="assets/venues/dotonbori.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a></div>
+              <p class="desc">Neon canal stroll with easy street-food dinner options.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Morning/early afternoon at <code>Osaka Castle</code>, evening in the lively <code>Dotonbori</code> corridor.</li>
+          <li>Travel between these areas: typically <strong>~25–35 min</strong>.</li>
+          <li>Hotel → Osaka Castle area: typically <strong>~20–25 min</strong>.</li>
+        </ul>
+        <h3>Visits</h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank" rel="noopener noreferrer">Osaka Castle</a> — time budget ~<strong>2–2.5 hours</strong></li>
+          <li>Evening: <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a> dinner and stroll (~<strong>2–3 hours</strong>)</li>
+          <li>Food ideas: <code>takoyaki</code>, <code>okonomiyaki</code></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>July 3: Universal Studios Japan Day 1</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Universal Studios Japan" src="assets/venues/universal-studios-japan.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Universal Studios Japan</a></div>
+              <p class="desc">Two-day plan focused on Nintendo World + Harry Potter/Minions.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Staying at/near USJ: minimal commuting (walk/short shuttle).</li>
+          <li>Full park day: <strong>~8–10 hours</strong>.</li>
+        </ul>
+        <h3>Priority</h3>
+        <ul>
+          <li><code>Nintendo World</code> entry early (plan <strong>~2–3 hours</strong> to get in + hit highlights)</li>
+          <li>Then rotate through nearby lands based on wait times (~<strong>4–6 hours</strong>)</li>
+          <li>Plan at least one show/meal break (~<strong>60–120 min</strong> total)</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>July 4: Universal Studios Japan Day 2</summary>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Same park, no extra travel. Full day: <strong>~7.5–9.5 hours</strong>.</li>
+        </ul>
+        <h3>Focus</h3>
+        <ul>
+          <li><code>Harry Potter</code> area (~<strong>2.5–3.5 hours</strong> incl. waits + walking)</li>
+          <li><code>Minions</code> rides (~<strong>1.5–3 hours</strong> incl. waits)</li>
+          <li><code>Shows</code> (~<strong>30–60 min</strong> each; pick 1–2 depending on energy/weather)</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>July 5: Osaka Aquarium day</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Osaka Aquarium Kaiyukan" src="assets/venues/osaka-aquarium-kaiyukan.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">Osaka Aquarium Kaiyukan</a></div>
+              <p class="desc">Major indoor day—great for weather and kid pacing.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Cluster around <code>Tempozan/Osaka Bay</code> (walkable).</li>
+          <li>Time budget: <strong>~4.5–6.5 hours</strong>.</li>
+          <li>Hotel → Tempozan/Aquarium area: typically <strong>~15–25 min</strong>.</li>
+        </ul>
+        <h3>Plan</h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">Osaka Aquarium Kaiyukan</a> — time budget ~<strong>2.5–3.5 hours</strong></li>
+          <li>Nearby: <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan Ferris Wheel</a> + harbor walk</li>
+          <li>Ferris wheel block: <strong>~45–75 min</strong>; harbor walk: <strong>~30–45 min</strong></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>July 6: Kyoto bamboo forest + Monkey Park</summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Arashiyama Bamboo Grove" src="assets/venues/arashiyama-bamboo-grove.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">Arashiyama Bamboo Grove</a></div>
+              <p class="desc">Signature bamboo path; best early before crowds.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>One <code>Arashiyama</code>-area day: bamboo + optional viewpoint/hike are close if energy is good.</li>
+          <li>Time budget: <strong>~6–8 hours</strong> (longer if you do Monkey Park).</li>
+          <li>Osaka → Arashiyama: typically <strong>~1.5–2.0 hours</strong> door-to-door.</li>
+        </ul>
+        <div class="route-card">
+          <div class="route-head">
+            <div class="route-title">Route map (30+ min commute)</div>
+            <div class="pill">Typical: 1.5–2.0 hours door-to-door</div>
+          </div>
+          <iframe
+            class="map-embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=The+Park+Front+Hotel+Universal+Studios+Japan&daddr=Arashiyama+Bamboo+Grove"
+            title="The Park Front Hotel to Arashiyama Bamboo Grove"
+          ></iframe>
+          <div class="small" style="margin-top: 8px">
+            Open in Maps:
+            <a href="https://www.google.com/maps/dir/?api=1&origin=The+Park+Front+Hotel+Universal+Studios+Japan&destination=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">directions link</a>.
+          </div>
+        </div>
+        <h3>Visits</h3>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">Arashiyama Bamboo Grove</a> — ~<strong>1.5–2.0 hours</strong></li>
+          <li>Optional hike: <a href="https://www.google.com/maps/search/?api=1&query=Iwatayama+Monkey+Park" target="_blank" rel="noopener noreferrer">Iwatayama Monkey Park</a> — ~<strong>1.5–2.5 hours</strong> incl. walking/queues</li>
+          <li>Stroller note: can be difficult due to steps/steeper paths; consider carrying or skipping.</li>
+        </ul>
+        <div class="tips">
+          <h4>Family of 6 tips</h4>
+          <ul>
+            <li>Go early if possible—bamboo paths are best before crowds.</li>
+            <li>If the toddler naps in the stroller, consider skipping Monkey Park and adding a riverside break instead.</li>
+          </ul>
+          <h4>Venue tips (Arashiyama)</h4>
+          <ul>
+            <li>Monkey Park: keep food hidden and follow staff rules; it’s a real hike.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary>July 7: Free flex day options (Osaka / Shinsaibashi) + souvenirs</summary>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Keep it in <code>Osaka city center</code> (Shinsaibashi) so it connects well to your Dotonbori plans.</li>
+          <li>Stay in the <code>Shinsaibashi ↔ Dotonbori</code> corridor to avoid moving districts.</li>
+          <li>Hotel → Shinsaibashi: typically <strong>~20–25 min</strong>.</li>
+          <li>Time budget: <strong>~3–5 hours</strong> for shopping/snacks/breaks, then a relaxed evening.</li>
+        </ul>
+        <h3>Choose one (daytime)</h3>
+        <ul>
+          <li>Shopping day</li>
+          <li>Or visit: <a href="https://www.google.com/maps/search/?api=1&query=Shinsaibashi" target="_blank" rel="noopener noreferrer">Shinsaibashi</a></li>
+        </ul>
+        <h3>Souvenir + relax plan (evening)</h3>
+        <ul>
+          <li>Return to a favorite area you already like (no extra transit if you can help it).</li>
+          <li>Pack early (budget <strong>~30–60 min</strong> for packing/admin).</li>
+          <li>Night walk: <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a> revisit (~<strong>1.5–2.5 hours</strong>).</li>
+          <li>
+            Kids fast dinner (ramen, quick split): pick one —
+            <a href="https://www.google.com/maps/search/?api=1&query=Ichiran+Shinsaibashi" target="_blank" rel="noopener noreferrer">Ichiran ramen (Shinsaibashi area)</a>
+            OR
+            <a href="https://www.google.com/maps/search/?api=1&query=Ippudo+Shinsaibashi" target="_blank" rel="noopener noreferrer">Ippudo (Shinsaibashi)</a>.
+            (~<strong>45–75 min</strong> total).
+          </li>
+          <li>
+            Parent rotation (optional): <a href="https://www.google.com/maps/search/?api=1&query=Sushitetsu+Shinsaibashi" target="_blank" rel="noopener noreferrer">Sushitetsu Shinsaibashi (all-you-can-eat sushi)</a>
+            (~<strong>90–120 min</strong>).
+          </li>
+          <li>
+            Optional adult-only break: <a href="https://www.google.com/maps/search/?api=1&query=love+hotel+Shinsaibashi+Namba" target="_blank" rel="noopener noreferrer">love hotel near Shinsaibashi/Namba</a>.
+          </li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>July 8: Departure day</summary>
+        <h3>Proximity & timing</h3>
+        <ul>
+          <li>Flight: <strong>KIX</strong> at <strong>07:35</strong>.</li>
+          <li>Because it’s early, plan to arrive at KIX by <strong>~05:35</strong> (2-hour buffer), which usually means leaving the hotel around <strong>~04:00–04:30</strong>.</li>
+        </ul>
+        <div class="route-card">
+          <div class="route-head">
+            <div class="route-title">Route map (USJ area → KIX)</div>
+            <div class="pill">Early morning: aim to leave 04:00–04:30</div>
+          </div>
+          <iframe
+            class="map-embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=The+Park+Front+Hotel+Universal+Studios+Japan&daddr=Kansai+International+Airport"
+            title="The Park Front Hotel to Kansai International Airport"
+          ></iframe>
+          <div class="small" style="margin-top: 8px">
+            Open in Maps:
+            <a href="https://www.google.com/maps/dir/?api=1&origin=The+Park+Front+Hotel+Universal+Studios+Japan&destination=Kansai+International+Airport" target="_blank" rel="noopener noreferrer">directions link</a>.
+          </div>
+        </div>
+        <h3>Getting to KIX (best options for 07:35)</h3>
+        <ul>
+          <li><strong>Option A (recommended for early flights): Taxi / private transfer</strong>
+            <ul>
+              <li>Door-to-door, no transfers with sleepy kids.</li>
+              <li>Typical: <strong>~55–75 min</strong> depending on traffic.</li>
+              <li>Tip: pre-book a large vehicle for a family of 6 + luggage.</li>
+            </ul>
+          </li>
+          <li><strong>Option B: Train (works, but check first-train timing)</strong>
+            <ul>
+              <li>Route usually involves <code>Universal City</code> → transfer(s) → <code>JR Airport Rapid</code> or <code>Nankai</code> to <code>KIX</code>.</li>
+              <li>Typical ride time once onboard: <strong>~70–95 min</strong> total, plus transfers/waits.</li>
+              <li>Tip: because it’s very early, confirm the first departure the night before.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <div class="card tip">
+        <h2>Important family travel tip (most visitors miss)</h2>
+        <ul>
+          <li>Use <a href="https://www.google.com/maps/search/?api=1&query=Yamato+Transport" target="_blank" rel="noopener noreferrer">Yamato Transport</a> luggage forwarding service</li>
+          <li>Ship luggage hotel-to-hotel overnight</li>
+          <li>Travel hands-free with kids</li>
+          <li>Huge quality-of-life upgrade</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Google Maps: quick links</h2>
+        <div class="small">These open a location search in a new tab.</div>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Grand+Nikko+Tokyo+Bay+Maihama" target="_blank" rel="noopener noreferrer">Grand Nikko Tokyo Bay Maihama</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">The Park Front Hotel (USJ)</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Tokyo Disneyland</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Tokyo DisneySea</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Universal Studios Japan</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree" target="_blank" rel="noopener noreferrer">Tokyo Skytree</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Sumida+Aquarium" target="_blank" rel="noopener noreferrer">Sumida Aquarium</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Konica+Minolta+Planetarium+Tenku" target="_blank" rel="noopener noreferrer">Konica Minolta Planetarium Tenku</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Postal+Museum+Japan" target="_blank" rel="noopener noreferrer">Postal Museum Japan</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Senso-ji" target="_blank" rel="noopener noreferrer">Senso-ji</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Nakamise+Street" target="_blank" rel="noopener noreferrer">Nakamise Street</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Government+Building" target="_blank" rel="noopener noreferrer">Tokyo Metropolitan Government Building</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Ikspiari" target="_blank" rel="noopener noreferrer">Ikspiari</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+Crossing" target="_blank" rel="noopener noreferrer">Shibuya Crossing</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Hachiko+Statue" target="_blank" rel="noopener noreferrer">Hachiko Statue</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+Sky" target="_blank" rel="noopener noreferrer">Shibuya Sky</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Meiji+Shrine" target="_blank" rel="noopener noreferrer">Meiji Shrine</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Harajuku" target="_blank" rel="noopener noreferrer">Harajuku</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Nonbei+Yokocho" target="_blank" rel="noopener noreferrer">Nonbei Yokocho</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Odaiba+Seaside+Park" target="_blank" rel="noopener noreferrer">Odaiba Seaside Park</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Universal CityWalk Osaka</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera" target="_blank" rel="noopener noreferrer">Kiyomizu-dera</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Sannenzaka" target="_blank" rel="noopener noreferrer">Sannenzaka</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Ninenzaka" target="_blank" rel="noopener noreferrer">Ninenzaka</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha" target="_blank" rel="noopener noreferrer">Fushimi Inari Taisha</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Nara+Park" target="_blank" rel="noopener noreferrer">Nara Park</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Todai-ji" target="_blank" rel="noopener noreferrer">Todai-ji</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank" rel="noopener noreferrer">Osaka Castle</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">Osaka Aquarium Kaiyukan</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan Ferris Wheel</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">Arashiyama Bamboo Grove</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Iwatayama+Monkey+Park" target="_blank" rel="noopener noreferrer">Iwatayama Monkey Park</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Shinsaibashi" target="_blank" rel="noopener noreferrer">Shinsaibashi</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Yamato+Transport" target="_blank" rel="noopener noreferrer">Yamato Transport</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
