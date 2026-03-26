@@ -9,7 +9,7 @@ This folder is set up for **[GitHub Pages](https://pages.github.com/)**: the sit
 2. From this folder on your machine:
 
    ```bash
-   cd /path/to/NOTES
+   cd ~/Documents/JAS/itinerary
    git init
    git add index.html assets README.md .gitignore
    git commit -m "Add itinerary site for GitHub Pages"
