@@ -21,6 +21,11 @@ These `.png` files are derived from openly licensed photos from Wikimedia Common
 - **`shibuya-sky.png`**: Derived from [File:Shibuya Scramble Square SHIBUYA SKY (52651897177).jpg](https://commons.wikimedia.org/wiki/File:Shibuya_Scramble_Square_SHIBUYA_SKY_(52651897177).jpg)
 - **`odaiba-seaside-park.png`**: Derived from [File:Odaiba Seashore Park.jpg](https://commons.wikimedia.org/wiki/File:Odaiba_Seashore_Park.jpg)
 - **`yoyogi-park.png`**: Derived from [File:Yoyogi Park Shibuya - Tokyo.jpg](https://commons.wikimedia.org/wiki/File:Yoyogi_Park_Shibuya_-_Tokyo.jpg)
+- **`nara-park.png`**: Derived from [File:Sika Deer in Nara Park, Japan.jpg](https://commons.wikimedia.org/wiki/File:Sika_Deer_in_Nara_Park,_Japan.jpg)
+- **`todai-ji.png`**: Derived from [File:Nara, Todai-ji Temple (6172345615).jpg](https://commons.wikimedia.org/wiki/File:Nara,_Todai-ji_Temple_(6172345615).jpg)
+- **`teamlab-planets.png`**: Derived from [File:Photos at teamlab planets tokyo.jpg](https://commons.wikimedia.org/wiki/File:Photos_at_teamlab_planets_tokyo.jpg)
+- **`tempozan-ferris-wheel.png`**: Derived from [File:Tempozan Ferris Wheel in Osaka at Dusk.jpg](https://commons.wikimedia.org/wiki/File:Tempozan_Ferris_Wheel_in_Osaka_at_Dusk.jpg)
+- **`kansai-international-airport.png`**: Derived from [File:Kansai International Airport Terminal2-2.JPG](https://commons.wikimedia.org/wiki/File:Kansai_International_Airport_Terminal2-2.JPG)
 
 ## Notes
 

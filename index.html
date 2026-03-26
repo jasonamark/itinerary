@@ -14,7 +14,7 @@
       }
       body {
         margin: 0;
-        padding: 24px;
+        padding: 16px 24px 24px;
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
           "Segoe UI Emoji";
         background: var(--bg);
@@ -31,13 +31,16 @@
       }
       .sub {
         color: var(--muted);
-        margin-bottom: 18px;
+        margin-bottom: 10px;
       }
       .card {
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 16px 18px;
         margin: 14px 0;
+      }
+      .wrap > .sub + .card {
+        margin-top: 6px;
       }
       h2 {
         font-size: 20px;
@@ -108,6 +111,21 @@
       summary {
         cursor: pointer;
         font-weight: 650;
+        padding: 4px 0;
+      }
+      /* Keep native disclosure marker + title on one line (block title wraps marker alone). */
+      summary .sum-title {
+        display: inline;
+        font-weight: 650;
+      }
+      summary .sum-sub {
+        display: block;
+        margin-top: 4px;
+        margin-left: 1.35em;
+        font-weight: 500;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.25;
       }
       .tip {
         background: #f8fafc;
@@ -285,9 +303,9 @@
           </li>
           <li>Travel structure:
             <ul>
-              <li><strong>Tokyo base:</strong> June 23–27</li>
-              <li><strong>Travel day:</strong> June 28</li>
-              <li><strong>Osaka base:</strong> June 28–July 8</li>
+              <li><strong>Tokyo base:</strong> June 23–29</li>
+              <li><strong>Travel day:</strong> June 30</li>
+              <li><strong>Osaka base:</strong> June 30–July 8</li>
             </ul>
           </li>
           <li>Theme parks included:
@@ -299,12 +317,6 @@
           </li>
         </ul>
       </div>
-
-      <div class="card">
-        <!-- Venue photo gallery removed; images are now placed in their corresponding days. -->
-      </div>
-
-      <hr />
 
       <script>
         // If an external image is blocked, replace it with a local (offline) SVG placeholder
@@ -345,10 +357,10 @@
         // Turn each single venue image into a carousel with multiple (unique) PNGs.
         // Use:
         //   slide 1: <name>.<ext>
-        //   slide 2+: <name>-<i>.<ext> (so i=2 => -2, i=3 => -3, etc.)
+        //   slide 2+: <name>-<i>.<ext> (so i=2 => -2, i=3 => -3, etc.; up to -5 when present)
         document.addEventListener("DOMContentLoaded", () => {
           const figures = Array.from(document.querySelectorAll("figure.venue"));
-          const MAX_SLIDES = 4;
+          const MAX_SLIDES = 5;
 
           figures.forEach((fig) => {
             const img = fig.querySelector("img");
@@ -373,7 +385,7 @@
               s.alt = alt;
               // Use:
               //   - slide 1:  <name>.<ext>
-              //   - slide 2+: <name>-<i>.<ext>  (so i=2 => -2, i=3 => -3, etc.)
+              //   - slide 2+: <name>-<i>.<ext>  (i=2..5 => -2..-5 when files exist)
               s.src = i === 1 ? `${srcBase}.${ext}` : `${srcBase}-${i}.${ext}`;
               s.onerror = () => venueImgError(s); // offline placeholder if a variant is missing
               if (i === 1) s.classList.add("is-active");
@@ -495,7 +507,7 @@
       </script>
 
       <details open>
-        <summary>Monday — June 22: Fly to Japan (travel day only)</summary>
+        <summary><span class="sum-title">Monday — June 22: Fly to Japan (travel day only)</span><span class="sum-sub">Long flight + jet-lag management. Keep it simple and rest-focused.</span></summary>
         <h3>Plan</h3>
         <ul>
           <li>Fly + jet lag management (no sightseeing planned in this itinerary since you arrive in Japan on Tuesday).</li>
@@ -505,13 +517,27 @@
       </details>
 
       <details open>
-        <summary>Tuesday — June 23: Arrive NRT 14:55 → Hotel (Maihama) + easy evening</summary>
+        <summary><span class="sum-title">Tuesday — June 23: Arrive NRT 14:55 → Hotel (Maihama) + easy evening</span><span class="sum-sub">Arrivals + check-in, then a gentle first-night Tokyo stretch and dinner.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Grand Nikko Tokyo Bay Maihama" src="assets/venues/grand-nikko-tokyo-bay-maihama.png" />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Grand+Nikko+Tokyo+Bay+Maihama" target="_blank" rel="noopener noreferrer">Grand Nikko Tokyo Bay Maihama</a></div>
               <p class="desc">Your Tokyo base in the Maihama/Disney area—ideal for an easy arrival evening.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Senso-ji" src="assets/venues/sensoji-asakusa.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Senso-ji" target="_blank" rel="noopener noreferrer">Senso-ji</a> <span class="small">(optional outing)</span></div>
+              <p class="desc">If you attempt the Skytree/Asakusa stretch after check-in—landmark temple + snack street energy.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Tokyo Skytree" src="assets/venues/tokyo-skytree.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree" target="_blank" rel="noopener noreferrer">Tokyo Skytree</a> <span class="small">(optional outing)</span></div>
+              <p class="desc">Skytree Town / views—pairs with a quick Asakusa loop if energy allows.</p>
             </figcaption>
           </figure>
         </div>
@@ -585,13 +611,67 @@
       </details>
 
       <details open>
-        <summary>Wednesday — June 24: Tokyo Disneyland (full park day)</summary>
+        <summary><span class="sum-title">Wednesday — June 24: Asakusa + Senso-ji + Tokyo Skytree (easy Tokyo day)</span><span class="sum-sub">Temple vibes + street snacks, then skyline views with easy indoor add-ons.</span></summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Senso-ji" src="assets/venues/sensoji-asakusa.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Senso-ji" target="_blank" rel="noopener noreferrer">Senso-ji</a></div>
+              <p class="desc">Morning anchor—temple + Nakamise snack stroll.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Tokyo Skytree" src="assets/venues/tokyo-skytree.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree" target="_blank" rel="noopener noreferrer">Tokyo Skytree</a></div>
+              <p class="desc">Afternoon views + Skytree Town for shade and food.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Sumida Aquarium" src="assets/venues/sumida-aquarium.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Sumida+Aquarium" target="_blank" rel="noopener noreferrer">Sumida Aquarium</a></div>
+              <p class="desc">Indoor add-on at the tower—easy with kids if you skip the deck.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Why this day</h3>
+        <ul>
+          <li>A lower-stress Tokyo day before Disney: flexible, easy to shorten, and lots of snacks + stroller-friendly breaks.</li>
+          <li>Great “Tokyo highlights” without committing to a huge cross-city itinerary.</li>
+        </ul>
+        <h3>Plan (choose your pacing)</h3>
+        <ul>
+          <li>Morning: <a href="https://www.google.com/maps/search/?api=1&query=Senso-ji" target="_blank" rel="noopener noreferrer">Senso-ji</a> + <a href="https://www.google.com/maps/search/?api=1&query=Nakamise+Street" target="_blank" rel="noopener noreferrer">Nakamise Street</a> snack stroll (~<strong>1.5–2.5 hours</strong>)</li>
+          <li>Midday: Riverside break (shade + snacks) (~<strong>30–60 min</strong>)</li>
+          <li>Afternoon: <a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree" target="_blank" rel="noopener noreferrer">Tokyo Skytree</a> views (~<strong>60–120 min</strong>)</li>
+          <li>Indoor add-on (pick one): <a href="https://www.google.com/maps/search/?api=1&query=Sumida+Aquarium" target="_blank" rel="noopener noreferrer">Sumida Aquarium</a> OR <a href="https://www.google.com/maps/search/?api=1&query=Konica+Minolta+Planetarium+Tenku" target="_blank" rel="noopener noreferrer">Planetarium Tenku</a> (~<strong>45–90 min</strong>)</li>
+          <li>Easy evening: back to <a href="https://www.google.com/maps/search/?api=1&query=Ikspiari" target="_blank" rel="noopener noreferrer">Ikspiari</a> for dinner if everyone still has energy (~<strong>60–120 min</strong>)</li>
+        </ul>
+        <div class="tips">
+          <h4>Family of 6 tips</h4>
+          <ul>
+            <li>Plan one “anchor” (Senso-ji) and treat everything else as optional based on naps/heat.</li>
+            <li>Hydration + shade: this is a good day to aim for <strong>more indoor time</strong> in the afternoon.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open>
+        <summary><span class="sum-title">Thursday — June 25: Tokyo Disneyland (full park day)</span><span class="sum-sub">Classic Disney day: rides + shows with a family rotation and lots of breaks.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Tokyo Disneyland" src="assets/venues/tokyo-disneyland.png" />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Tokyo Disneyland</a></div>
               <p class="desc">Big classic Disney rides + shows (built for family rotations).</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Tokyo DisneySea" src="assets/venues/tokyo-disneysea.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Tokyo DisneySea</a></div>
+              <p class="desc">Same resort zone—helps kids visualize the “two-park” coastline you’ll do next.</p>
             </figcaption>
           </figure>
         </div>
@@ -636,6 +716,28 @@
             <li>Meal timing: aim for a sit-down meal slightly before the main lunch rush to avoid long lines with a 1-year-old.</li>
             <li>Hydration & shade: take micro-breaks every ~90 minutes.</li>
           </ul>
+          <h4>Disney Premier Access & ride scheduling</h4>
+          <ul>
+            <li>
+              <strong>Paid “fast lane” here is <a href="https://www.tokyodisneyresort.jp/en/tdr/guide/app_service/disneypremieraccess.html" target="_blank" rel="noopener noreferrer">Disney Premier Access</a>:</strong>
+              buy timed entry or shorter-wait access for <strong>select</strong> rides and some parades/shows through the <strong>Tokyo Disney Resort</strong> app (fees and eligible experiences change—check the official page and in-app list on your park day).
+            </li>
+            <li>
+              <strong>Before the trip:</strong> install the app, create/link <strong>My Disney accounts</strong> for anyone who might purchase Premier Access, and confirm everyone’s park tickets are tied to profiles in the app so one adult isn’t stuck doing everything at gate time.
+            </li>
+            <li>
+              <strong>Family of 6 economics:</strong> Premier Access is usually <strong>per guest, per experience</strong>—costs add up fast. Pick <strong>one or two</strong> true “must-dos” that tend to spike (often the newest or flashiest rides) rather than buying every offering.
+            </li>
+            <li>
+              <strong>Pacing:</strong> after entering, pick return windows that fit <strong>meals, parade/show times, and stroller naps</strong>. Assign one parent as “app captain” to grab windows so the rest of the group isn’t scanning phones at every turnstile.
+            </li>
+            <li>
+              <strong>Standby strategy:</strong> rope-drop one compact <strong>land cluster</strong>, do 1–2 short-queue rides while lines are thin, then either standby your single top priority <strong>early</strong> or switch to Premier Access if waits are exploding—avoid zig-zagging across the park for marginal savings.
+            </li>
+            <li>
+              On crowded days the app may also use <strong>Standby Pass</strong> / entry rules for certain experiences—treat the app’s prompts as the authority, not third-party blogs.
+            </li>
+          </ul>
           <h4>Venue tips (Disneyland)</h4>
           <ul>
             <li>If crowds are heavy, do a "land loop": go where you can move fastest, then lock in your show/parade time.</li>
@@ -644,13 +746,20 @@
       </details>
 
       <details open>
-        <summary>Thursday — June 25: Tokyo DisneySea Day 1</summary>
+        <summary><span class="sum-title">Friday — June 26: Tokyo DisneySea Day 1</span><span class="sum-sub">Big-ticket attractions early, plus indoor “reset zones” for naps and weather.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Tokyo DisneySea" src="assets/venues/tokyo-disneysea.png" />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Tokyo DisneySea</a></div>
               <p class="desc">Two-day plan with strong indoor options (Mermaid Lagoon) for rain breaks.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Tokyo Disneyland" src="assets/venues/tokyo-disneyland.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Tokyo Disneyland</a></div>
+              <p class="desc">Neighbor park in the same resort—useful landmarking for monorail/walks between days.</p>
             </figcaption>
           </figure>
         </div>
@@ -697,6 +806,26 @@
             <li>Use a <strong>two-adult rotation</strong>: 2 adults do a big ride while others do a kid zone, then swap.</li>
             <li>Keep a <strong>mobile battery</strong> per parent for maps, tickets, and photos.</li>
           </ul>
+          <h4>Disney Premier Access & ride scheduling</h4>
+          <ul>
+            <li>
+              Same system as Disneyland:
+              <a href="https://www.tokyodisneyresort.jp/en/tdr/guide/app_service/disneypremieraccess.html" target="_blank" rel="noopener noreferrer">Disney Premier Access</a>
+              is the paid, app-based option for <strong>select</strong> rides and some entertainment (offerings and prices vary—check the app after you enter).
+            </li>
+            <li>
+              <strong>Sea-specific pacing:</strong> headliners like <code>Journey to the Center of the Earth</code>, <code>Toy Story Mania!</code>, and newer Fantasy Springs rides can dominate waits—decide as a family whether you’ll <strong>rope-drop one</strong>, <strong>standby once</strong>, or fund <strong>one Premier Access</strong> block for the worst offender, then fill the day with lower-stress experiences.
+            </li>
+            <li>
+              <strong>Stack windows carefully:</strong> don’t book Premier Access return times back-to-back across opposite ends of the park with small kids; pair a return window with a nearby meal, show, or indoor break (Mermaid Lagoon, shops, cafés).
+            </li>
+            <li>
+              <strong>Rotation + Premier Access:</strong> if only some riders meet height rules, confirm how many passes you need before purchasing—wasted purchases are expensive at ×6 people.
+            </li>
+            <li>
+              If the app offers <strong>Standby Pass</strong> or other entry controls for an experience you want, grab them early; capacity can disappear on peak summer days.
+            </li>
+          </ul>
           <h4>Venue tips (DisneySea)</h4>
           <ul>
             <li>Prioritize the one attraction with the longest typical waits early, then fill with shorter queues.</li>
@@ -706,7 +835,23 @@
       </details>
 
       <details open>
-        <summary>Friday — June 26: Tokyo DisneySea Day 2 (relaxed pace)</summary>
+        <summary><span class="sum-title">Saturday — June 27: Tokyo DisneySea Day 2 (relaxed pace)</span><span class="sum-sub">Slower wander day: photos, favorites you missed, and an early night.</span></summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Tokyo DisneySea" src="assets/venues/tokyo-disneysea.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Tokyo DisneySea</a></div>
+              <p class="desc">Second in-park day—lighter pace, photos, and missed corners.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Tokyo Disneyland" src="assets/venues/tokyo-disneyland.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Tokyo Disneyland</a></div>
+              <p class="desc">Resort neighbor—easy orientation while you crisscross the Disney zone.</p>
+            </figcaption>
+          </figure>
+        </div>
         <h3>Proximity & timing</h3>
         <ul>
           <li>Still an in-park day; keep it a bit lighter than Day 1.</li>
@@ -735,18 +880,28 @@
           <h4>Venue tips</h4>
           <ul>
             <li>If weather is bad, focus on the most covered/indoor areas and do shops last.</li>
+            <li>
+              Premier Access still works the same as Day 1—use it only for a <strong>single</strong> stubborn must-do if lines are wild; otherwise keep the day loose and avoid over-scheduling return windows.
+            </li>
           </ul>
         </div>
       </details>
 
       <details open>
-        <summary>Saturday — June 27: Odaiba + teamLab + Gundam</summary>
+        <summary><span class="sum-title">Sunday — June 28: Odaiba + teamLab + Gundam</span><span class="sum-sub">Waterfront day with a wow-factor art museum and an easy sunset-style stroll.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Odaiba Seaside Park" src="assets/venues/odaiba-seaside-park.png" />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Odaiba+Seaside+Park" target="_blank" rel="noopener noreferrer">Odaiba Seaside Park</a></div>
               <p class="desc">Easy waterfront stretch + sunset-style atmosphere.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="teamLab Planets TOKYO" src="assets/venues/teamlab-planets.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=teamLab+Planets+TOKYO" target="_blank" rel="noopener noreferrer">teamLab Planets TOKYO</a></div>
+              <p class="desc">Your “wow” museum anchor—immersive light rooms + lots of photo moments.</p>
             </figcaption>
           </figure>
         </div>
@@ -766,7 +921,7 @@
       </details>
 
       <details open>
-        <summary>Sunday — June 28: Shibuya + Harajuku + Meiji Shrine (buffer day)</summary>
+        <summary><span class="sum-title">Monday — June 29: Shibuya + Harajuku + Meiji Shrine (buffer day)</span><span class="sum-sub">Tokyo icons + a calm shrine forest reset—flexible based on energy and crowds.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Shibuya Crossing" src="assets/venues/shibuya-crossing.png" />
@@ -880,7 +1035,23 @@
       </details>
 
       <details open>
-        <summary>Monday — June 29: Shinkansen to Osaka + check-in</summary>
+        <summary><span class="sum-title">Tuesday — June 30: Shinkansen to Osaka + check-in</span><span class="sum-sub">Bullet train day: stations, bento lunch, hotel check-in, then an easy evening.</span></summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Grand Nikko Tokyo Bay Maihama" src="assets/venues/grand-nikko-tokyo-bay-maihama.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Grand+Nikko+Tokyo+Bay+Maihama" target="_blank" rel="noopener noreferrer">Grand Nikko Tokyo Bay Maihama</a></div>
+              <p class="desc">Morning packing / Tokyo departure from the Maihama Disney-area base.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Universal CityWalk Osaka" src="assets/venues/universal-studios-japan.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Universal CityWalk Osaka</a></div>
+              <p class="desc">After check-in: dinner and a low-key stroll in the USJ zone (park next door).</p>
+            </figcaption>
+          </figure>
+        </div>
         <h3>Proximity & timing</h3>
         <ul>
           <li>Long-distance leg first; that night’s activities are near <code>Universal City</code> / <code>CityWalk</code>.</li>
@@ -901,7 +1072,7 @@
       </details>
 
       <details open>
-        <summary>Tuesday — June 30: Kyoto historic district day</summary>
+        <summary><span class="sum-title">Wednesday — July 1: Kyoto historic district day</span><span class="sum-sub">Classic Kyoto streets + temple views—slow, scenic, and snack-friendly.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Kiyomizu-dera" src="assets/venues/kiyomizu-dera.png" />
@@ -958,7 +1129,23 @@
       </details>
 
       <details open>
-        <summary>Wednesday — July 1: Nara deer day</summary>
+        <summary><span class="sum-title">Thursday — July 2: Nara deer day</span><span class="sum-sub">Deer feeding + a giant Buddha—lots of walking with plenty of open space.</span></summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Nara Park" src="assets/venues/nara-park.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Nara+Park" target="_blank" rel="noopener noreferrer">Nara Park</a></div>
+              <p class="desc">Deer encounters + shaded paths—expect lots of strolling and snack breaks.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Todai-ji" src="assets/venues/todai-ji.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Todai-ji" target="_blank" rel="noopener noreferrer">Todai-ji</a></div>
+              <p class="desc">The “giant Buddha” wow moment—big scale, big photos, big stairs.</p>
+            </figcaption>
+          </figure>
+        </div>
         <h3>Proximity & timing</h3>
         <ul>
           <li>Main stops are in/around <code>Nara Park</code>, so it’s very walkable.</li>
@@ -1002,7 +1189,7 @@
       </details>
 
       <details open>
-        <summary>July 2: Osaka Castle + Dotonbori</summary>
+        <summary><span class="sum-title">Friday — July 3: Osaka Castle + Dotonbori</span><span class="sum-sub">Daytime castle grounds + a neon canal dinner stroll at night.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Osaka Castle" src="assets/venues/osaka-castle.png" />
@@ -1034,7 +1221,7 @@
       </details>
 
       <details open>
-        <summary>July 3: Universal Studios Japan Day 1</summary>
+        <summary><span class="sum-title">Saturday — July 4: Universal Studios Japan Day 1</span><span class="sum-sub">Big park energy—hit Nintendo World early, then pace with shows and breaks.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Universal Studios Japan" src="assets/venues/universal-studios-japan.png" />
@@ -1058,7 +1245,16 @@
       </details>
 
       <details open>
-        <summary>July 4: Universal Studios Japan Day 2</summary>
+        <summary><span class="sum-title">Sunday — July 5: Universal Studios Japan Day 2</span><span class="sum-sub">Second park day to mop up favorites—slightly lighter, more flexible.</span></summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Universal Studios Japan" src="assets/venues/universal-studios-japan.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Universal Studios Japan</a></div>
+              <p class="desc">Day 2—Harry Potter, Minions, shows, and anything you skipped yesterday.</p>
+            </figcaption>
+          </figure>
+        </div>
         <h3>Proximity & timing</h3>
         <ul>
           <li>Same park, no extra travel. Full day: <strong>~7.5–9.5 hours</strong>.</li>
@@ -1072,13 +1268,20 @@
       </details>
 
       <details open>
-        <summary>July 5: Osaka Aquarium day</summary>
+        <summary><span class="sum-title">Monday — July 6: Osaka Aquarium day</span><span class="sum-sub">Indoor, weather-proof day with a strong “wow” centerpiece and easy pacing.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Osaka Aquarium Kaiyukan" src="assets/venues/osaka-aquarium-kaiyukan.png" />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">Osaka Aquarium Kaiyukan</a></div>
               <p class="desc">Major indoor day—great for weather and kid pacing.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Tempozan Ferris Wheel" src="assets/venues/tempozan-ferris-wheel.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan harbor + Ferris wheel</a></div>
+              <p class="desc">Short add-on right next to the aquarium—bayfront stroll + skyline views.</p>
             </figcaption>
           </figure>
         </div>
@@ -1097,13 +1300,20 @@
       </details>
 
       <details open>
-        <summary>July 6: Kyoto bamboo forest + Monkey Park</summary>
+        <summary><span class="sum-title">Tuesday — July 7: Kyoto bamboo forest + Monkey Park</span><span class="sum-sub">Early bamboo stroll, then an optional real hike with monkeys and views.</span></summary>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Arashiyama Bamboo Grove" src="assets/venues/arashiyama-bamboo-grove.png" />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">Arashiyama Bamboo Grove</a></div>
               <p class="desc">Signature bamboo path; best early before crowds.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Kiyomizu-dera" src="assets/venues/kiyomizu-dera.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera" target="_blank" rel="noopener noreferrer">Kiyomizu-dera</a> <span class="small">(earlier Kyoto day)</span></div>
+              <p class="desc">Your Higashiyama highlight from earlier—Arashiyama is Kyoto’s other “postcard” texture.</p>
             </figcaption>
           </figure>
         </div>
@@ -1150,43 +1360,23 @@
       </details>
 
       <details open>
-        <summary>July 7: Free flex day options (Osaka / Shinsaibashi) + souvenirs</summary>
-        <h3>Proximity & timing</h3>
-        <ul>
-          <li>Keep it in <code>Osaka city center</code> (Shinsaibashi) so it connects well to your Dotonbori plans.</li>
-          <li>Stay in the <code>Shinsaibashi ↔ Dotonbori</code> corridor to avoid moving districts.</li>
-          <li>Hotel → Shinsaibashi: typically <strong>~20–25 min</strong>.</li>
-          <li>Time budget: <strong>~3–5 hours</strong> for shopping/snacks/breaks, then a relaxed evening.</li>
-        </ul>
-        <h3>Choose one (daytime)</h3>
-        <ul>
-          <li>Shopping day</li>
-          <li>Or visit: <a href="https://www.google.com/maps/search/?api=1&query=Shinsaibashi" target="_blank" rel="noopener noreferrer">Shinsaibashi</a></li>
-        </ul>
-        <h3>Souvenir + relax plan (evening)</h3>
-        <ul>
-          <li>Return to a favorite area you already like (no extra transit if you can help it).</li>
-          <li>Pack early (budget <strong>~30–60 min</strong> for packing/admin).</li>
-          <li>Night walk: <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a> revisit (~<strong>1.5–2.5 hours</strong>).</li>
-          <li>
-            Kids fast dinner (ramen, quick split): pick one —
-            <a href="https://www.google.com/maps/search/?api=1&query=Ichiran+Shinsaibashi" target="_blank" rel="noopener noreferrer">Ichiran ramen (Shinsaibashi area)</a>
-            OR
-            <a href="https://www.google.com/maps/search/?api=1&query=Ippudo+Shinsaibashi" target="_blank" rel="noopener noreferrer">Ippudo (Shinsaibashi)</a>.
-            (~<strong>45–75 min</strong> total).
-          </li>
-          <li>
-            Parent rotation (optional): <a href="https://www.google.com/maps/search/?api=1&query=Sushitetsu+Shinsaibashi" target="_blank" rel="noopener noreferrer">Sushitetsu Shinsaibashi (all-you-can-eat sushi)</a>
-            (~<strong>90–120 min</strong>).
-          </li>
-          <li>
-            Optional adult-only break: <a href="https://www.google.com/maps/search/?api=1&query=love+hotel+Shinsaibashi+Namba" target="_blank" rel="noopener noreferrer">love hotel near Shinsaibashi/Namba</a>.
-          </li>
-        </ul>
-      </details>
-
-      <details open>
-        <summary>July 8: Departure day</summary>
+        <summary><span class="sum-title">Wednesday — July 8: Departure day</span><span class="sum-sub">Early airport run—smooth, quiet morning with zero extra plans.</span></summary>
+        <div class="venue-inline">
+          <figure class="venue">
+            <img loading="lazy" alt="Universal Studios Japan" src="assets/venues/universal-studios-japan.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">The Park Front Hotel (USJ)</a></div>
+              <p class="desc">Early wheels-up from the USJ zone—last look at CityWalk/park gates before your KIX flight.</p>
+            </figcaption>
+          </figure>
+          <figure class="venue">
+            <img loading="lazy" alt="Kansai International Airport (KIX)" src="assets/venues/kansai-international-airport.png" />
+            <figcaption>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport" target="_blank" rel="noopener noreferrer">Kansai International Airport (KIX)</a></div>
+              <p class="desc">Your final stop—early check-in, coffee, and a calm gate routine.</p>
+            </figcaption>
+          </figure>
+        </div>
         <h3>Proximity & timing</h3>
         <ul>
           <li>Flight: <strong>KIX</strong> at <strong>07:35</strong>.</li>
