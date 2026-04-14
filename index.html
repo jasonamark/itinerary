@@ -51,6 +51,18 @@
         font-size: 16px;
         margin: 12px 0 6px 0;
       }
+      h4.food-rated {
+        font-size: 14px;
+        margin: 12px 0 6px 0;
+        font-weight: 650;
+        color: var(--text);
+      }
+      ul.food-rated {
+        margin: 0 0 10px 14px;
+      }
+      ul.food-rated li {
+        margin: 5px 0;
+      }
       hr {
         border: 0;
         height: 1px;
@@ -181,6 +193,32 @@
         margin: 0;
         color: var(--muted);
         font-size: 0.95em;
+      }
+      /* July 6: teamLab photos are mostly dark—lift carousel chrome for contrast */
+      figure.venue.teamlab-biovortex .carousel {
+        background: #06060a;
+      }
+      figure.venue.teamlab-biovortex .carousel button {
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+      }
+      figure.venue.teamlab-biovortex .dot {
+        background: rgba(255, 255, 255, 0.28);
+      }
+      figure.venue.teamlab-biovortex .dot.is-active {
+        background: rgba(255, 255, 255, 0.92);
+      }
+      /* July 3: Kaiyukan photos skew dark blue—match carousel chrome */
+      figure.venue.kaiyukan-aquarium .carousel {
+        background: #0a1628;
+      }
+      figure.venue.kaiyukan-aquarium .carousel button {
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+      }
+      figure.venue.kaiyukan-aquarium .dot {
+        background: rgba(255, 255, 255, 0.3);
+      }
+      figure.venue.kaiyukan-aquarium .dot.is-active {
+        background: rgba(255, 255, 255, 0.92);
       }
       .carousel {
         position: relative;
@@ -329,7 +367,7 @@
         font-weight: 650;
       }
       details.day-hourly > .small:first-of-type {
-        margin: 6px 0 4px 1.35em;
+        margin: 6px 0 4px 0;
       }
       .hour-table {
         width: 100%;
@@ -437,26 +475,40 @@
             <strong>July 1–2</strong> — two days
             <a href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Universal Studios Japan</a>.
             <strong>July 3</strong> — bay recovery:
-            <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">Kaiyukan</a>
-            + <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Marketplace+Osaka" target="_blank" rel="noopener noreferrer">Tempozan Marketplace</a> / harbor stroll; skip the Ferris wheel here if you plan to ride it on <strong>July 4</strong>.
-            <strong>July 4</strong> —
-            <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank" rel="noopener noreferrer">Osaka Castle</a>,
+            <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">Osaka Aquarium Kaiyukan</a>,
             <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan Ferris Wheel</a>,
-            <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a>.
+            <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Marketplace+Osaka" target="_blank" rel="noopener noreferrer">Tempozan Marketplace</a> / optional harbor / seaside stroll.
+            <strong>July 4</strong> —
+            <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank" rel="noopener noreferrer">Osaka Castle</a> +
+            <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a> (recommended
+            <a href="https://www.google.com/maps/search/?api=1&query=Tombori+River+Cruise+Dotonbori" target="_blank" rel="noopener noreferrer">Tombori River Cruise</a>); optional north-Osaka
+            <a href="https://www.google.com/maps/search/?api=1&query=Minoh+Falls+Minoo+Osaka" target="_blank" rel="noopener noreferrer">Minoo Park / Minoh Falls</a> half-day if you skip the long afternoon hotel break.
             <strong>July 5</strong> —
             <a href="https://www.google.com/maps/search/?api=1&query=Nara+Park" target="_blank" rel="noopener noreferrer">Nara</a> (deer +
-            <a href="https://www.google.com/maps/search/?api=1&query=Todai-ji" target="_blank" rel="noopener noreferrer">Todai-ji</a>).
+            <a href="https://www.google.com/maps/search/?api=1&query=Todai-ji" target="_blank" rel="noopener noreferrer">Todai-ji</a>);
+            optional <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Cable+Car+Toriimae" target="_blank" rel="noopener noreferrer">Mt. Ikoma cable car</a> +
+            <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Sanjo+Amusement+Park" target="_blank" rel="noopener noreferrer">summit amusement park</a> for plain/mountain views on the <strong>Kintetsu</strong> return toward Osaka.
           </li>
           <li>
             <strong>Kyoto (two days):</strong>
             <strong>July 6</strong> — <a href="https://www.google.com/maps/search/?api=1&query=teamLab+Biovortex+Kyoto" target="_blank" rel="noopener noreferrer">teamLab Biovortex Kyoto</a> (timed tickets) plus central highlights—e.g.
             <a href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha" target="_blank" rel="noopener noreferrer">Fushimi Inari</a> (torii gates) and/or
             <a href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera" target="_blank" rel="noopener noreferrer">Kiyomizu-dera</a> /
-            <a href="https://www.google.com/maps/search/?api=1&query=Ninenzaka" target="_blank" rel="noopener noreferrer">Ninenzaka</a> (pick what fits energy).
-            <strong>July 7</strong> — <a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">Arashiyama</a> bamboo + optional <a href="https://www.google.com/maps/search/?api=1&query=Iwatayama+Monkey+Park" target="_blank" rel="noopener noreferrer">Monkey Park</a> (west Kyoto).
+            <a href="https://www.google.com/maps/search/?api=1&query=Ninenzaka" target="_blank" rel="noopener noreferrer">Ninenzaka</a> (pick what fits energy); optional
+            <a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market" target="_blank" rel="noopener noreferrer">Nishiki Market</a> (covered food arcade, ~30–60 min).
+            <strong>July 7</strong> — pick one arc: <strong>A</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Solaniwa+Onsen+Tempozan" target="_blank" rel="noopener noreferrer">Solaniwa Onsen</a> (Tempozan bay recovery),
+            <strong>B</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hirakata+Park" target="_blank" rel="noopener noreferrer">Hirakata Park</a>,
+            <strong>C</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">Arashiyama</a> bamboo + optional
+            <a href="https://www.google.com/maps/search/?api=1&query=Iwatayama+Monkey+Park" target="_blank" rel="noopener noreferrer">Monkey Park</a> (west Kyoto, long commute),
+            <strong>D</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Umeda+Sky+Building" target="_blank" rel="noopener noreferrer">Umeda Sky Building</a> +
+            <a href="https://www.google.com/maps/search/?api=1&query=MIRACLE+WORLD+Osaka+Namba" target="_blank" rel="noopener noreferrer">MIRACLE WORLD</a> (Namba digital walkthrough—pairs with Plan D), or <strong>E</strong> a shorter combo (see July 7 card).
           </li>
           <li>
-            <strong>Eating (trip-wide):</strong> each day below lists <strong>Food — Japan-first picks</strong>—think
+            <strong>Eating (trip-wide):</strong> each day below lists <strong>Food — Japan-first picks</strong> plus <strong>Highly rated near today</strong> (linked picks you can open in Maps)—think
             <a href="https://www.google.com/maps/search/?api=1&query=teishoku+Tokyo" target="_blank" rel="noopener noreferrer">teishoku</a>,
             <a href="https://www.google.com/maps/search/?api=1&query=depachika+Tokyo+Station" target="_blank" rel="noopener noreferrer">depachika</a>,
             <a href="https://www.google.com/maps/search/?api=1&query=ekiben+Tokyo+Station" target="_blank" rel="noopener noreferrer">ekiben</a>,
@@ -540,7 +592,22 @@
               </li>
               <li><strong>Kirby Café</strong> (Solamachi, if wanted): reservation when the calendar opens for your day.</li>
               <li><strong>Osaka Aquarium Kaiyukan</strong> (<strong>July 3</strong>): dated/time-slot tickets in peak summer—book on official channels once you lock the bay day.</li>
-              <li><strong>Sagano Romantic Train</strong> (July 7, if wanted): reserve when sales open—summer seats go quickly.</li>
+              <li>
+                <strong>Sagano Romantic Train</strong> (only if <strong>July 7 Plan C</strong> Arashiyama): reserve when sales open—summer seats go quickly.
+              </li>
+              <li>
+                <strong>Hirakata Park</strong> (<strong>July 7 Plan B / E</strong>): check official site for dated tickets / summer lines if you lock this day—weekends are busiest.
+              </li>
+              <li>
+                <strong>Solaniwa Onsen</strong> (<strong>July 7 Plan A / E1</strong>): confirm same-day entry rules, tattoo policy, and kid-height rules on the official site; weekends can hit capacity.
+              </li>
+              <li>
+                <strong>Umeda Sky Building</strong> (<strong>July 7 Plan D / E2</strong>): timed observatory tickets often smoother than walk-up in summer—book the window you want (sunset slots go first).
+              </li>
+              <li>
+                <strong>MIRACLE WORLD Osaka</strong> (<strong>July 7 Plan D</strong> primary; optional <strong>E3</strong> / Plan B Namba detour): book a <strong>timed entry</strong> on the
+                <a href="https://miracle-world.co.jp/" target="_blank" rel="noopener noreferrer">official site</a>—walk-up lines can eat your Umeda Sky window in summer.
+              </li>
               <li>
                 <strong>teamLab Biovortex Kyoto</strong> (<strong>July 6</strong>): <strong>date + entry-time</strong> tickets on the official
                 <a href="https://www.teamlab.art/e/kyoto" target="_blank" rel="noopener noreferrer">teamLab</a> site—summer slots can sell out; not walk-up reliable.
@@ -861,6 +928,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=Asian+food+Vancouver+Airport" target="_blank" rel="noopener noreferrer">YVR</a>, Asian/noodle counters and grab-and-go are easy wins during the layover. After landing at
           <a href="https://www.google.com/maps/search/?api=1&query=restaurants+Narita+Airport+Terminal+1+arrivals" target="_blank" rel="noopener noreferrer">NRT</a>, your first Japan-format meals start in the arrival area and en route to the hotel.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Jade+Seafood+Restaurant+YVR+airport" target="_blank" rel="noopener noreferrer">Jade Seafood Restaurant (YVR)</a> — sit-down dim sum / Cantonese if you want one real meal during the layover.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Peace+Market+food+court+Vancouver+airport" target="_blank" rel="noopener noreferrer">Peace Market / international food court (YVR)</a> — fast noodles, sushi, and rice bowls near many wide-body gates.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Ichiran+Narita+Airport+Terminal+1" target="_blank" rel="noopener noreferrer">Ichiran (Narita T1)</a> — reliable solo-booth tonkotsu ramen after landing (queues move, but kids + six seats need patience).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=T%27s+TanTan+Narita+Airport" target="_blank" rel="noopener noreferrer">T’s Tantan (Narita)</a> — plant-forward ramen option if someone wants lighter broth after the flight.
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Stage one adult as “document captain” for LAS check-in and another as “kid captain” so passports/boarding passes never live in the same bag as snacks.</li>
@@ -1035,6 +1117,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=とんかつ+新浦安" target="_blank" rel="noopener noreferrer">tonkatsu (Shin-Urayasu)</a>, or konbini
           <strong>nikuman</strong>, <strong>onigiri</strong>, and <strong>karaage</strong>.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kyoto+Katsugyu+Ikspiari" target="_blank" rel="noopener noreferrer">Kyoto Katsugyu (Ikspiari)</a> — wagyu katsu sando / beef cutlet sets; easy for mixed ages.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Monsoon+Cafe+Ikspiari" target="_blank" rel="noopener noreferrer">Monsoon Cafe (Ikspiari)</a> — Southeast Asian plates with high turnover and big tables.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Bon+Voyage+Tokyo+Disney+Resort" target="_blank" rel="noopener noreferrer">Bon Voyage (Maihama)</a> — Disney-adjacent shop + snack stop if you’re walking from the hotel before Ikspiari.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hamburg+Steak+Ohsho+Maihama" target="_blank" rel="noopener noreferrer">Gyoza no Ohsho / Ohsho cluster (Maihama–Shin-Urayasu)</a> — cheap, fast Japanese “family restaurant” classics when you just need calories.
+          </li>
+        </ul>
         <div class="tips">
           <h4>Family of 6 tips</h4>
           <ul>
@@ -1194,6 +1291,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=Ikspiari" target="_blank" rel="noopener noreferrer">Ikspiari</a> has real
           <a href="https://www.google.com/maps/search/?api=1&query=washoku+Ikspiari" target="_blank" rel="noopener noreferrer">washoku</a> if you still want a non-park meal.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Grandma+Sara%27s+Kitchen+Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Grandma Sara’s Kitchen (in-park)</a> — buffet-style comfort plates; easier for mixed kid tastes than some character dining.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Camp+Woodchuck+Kitchen+Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Camp Woodchuck Kitchen (in-park)</a> — BBQ / picnic sets; shaded outdoor seating when weather cooperates.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Queen+of+Hearts+Banquet+Hall+Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Queen of Hearts Banquet Hall (in-park)</a> — themed quick cafeteria; book if you want the full “Alice” room experience.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Center+Street+Coffeehouse+Tokyo+Disneyland" target="_blank" rel="noopener noreferrer">Center Street Coffeehouse (in-park)</a> — pancakes / café plates for a slower breakfast-before-rope-drop option when hours allow.
+          </li>
+        </ul>
         <div class="tips">
           <h4>Family of 6 tips</h4>
           <ul>
@@ -1379,6 +1491,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=Mediterranean+Harbor+restaurant+Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">harbor-view cafés</a>, and weird seasonal snacks.
           <a href="https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea+restaurant" target="_blank" rel="noopener noreferrer">Browse in-park spots (map)</a>. Sea’s food is part of the “only in Japan Disney” experience—lean into it instead of defaulting to the blandest fried plate.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Vulcania+Restaurant+Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Vulcania Restaurant (in-park)</a> — Chinese / noodles in the volcano; strong A/C pit stop.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Magellan%27s+Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Magellan’s (in-park)</a> — fine-dining Spanish / European; reserve if you want one “special” Sea dinner.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Zambini+Brothers+Ristorante+Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Zambini Brothers’ Ristorante (in-park)</a> — pizza / pasta patio on the Mediterranean Harbor.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Horizon+Bay+Restaurant+Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Horizon Bay Restaurant (in-park)</a> — harbor-view buffet partner location when you want one big sit-down reset.
+          </li>
+        </ul>
         <div class="tips">
           <h4>Family of 6 tips</h4>
           <ul>
@@ -1542,6 +1669,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=washoku+Ikspiari" target="_blank" rel="noopener noreferrer">washoku</a> dinner at
           <a href="https://www.google.com/maps/search/?api=1&query=Ikspiari" target="_blank" rel="noopener noreferrer">Ikspiari</a> beats rushing park fried food.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Miguel%27s+El+Dorado+Cantina+Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Miguel’s El Dorado Cantina (Lost River Delta)</a> — tacos / rice plates when you want spice near Indiana Jones waits.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sakura+Restaurant+Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Sakura Restaurant (American Waterfront)</a> — Japanese set menus in a quieter dining room than many quick counters.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hudson+River+Harvest+Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Hudson River Harvest (in-park)</a> — lighter plates when you want vegetables after two park days.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sebastian%27s+Calypso+Kitchen+Tokyo+DisneySea" target="_blank" rel="noopener noreferrer">Sebastian’s Calypso Kitchen (Mermaid Lagoon)</a> — kid-friendly buffet when you need A/C + speed between shows.
+          </li>
+        </ul>
         <div class="tips">
           <h4>Family of 6 tips</h4>
           <ul>
@@ -1776,6 +1918,21 @@
             <a href="https://www.google.com/maps/search/?api=1&query=onigiri+Tokyo+Solamachi" target="_blank" rel="noopener noreferrer">onigiri</a> /
             <a href="https://www.google.com/maps/search/?api=1&query=karaage+bento+Tokyo+Solamachi" target="_blank" rel="noopener noreferrer">karaage</a>;
             <a href="https://www.google.com/maps/search/?api=1&query=Kirby+Cafe+Tokyo+Solamachi" target="_blank" rel="noopener noreferrer">Kirby Café</a> is optional—not your only washoku moment.
+          </li>
+        </ul>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Daikokuya+Tempura+Asakusa" target="_blank" rel="noopener noreferrer">Daikokuya (Asakusa)</a> — classic tempura teishoku; expect a modest queue at peak lunch.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Imozen+Asakusa" target="_blank" rel="noopener noreferrer">Imozen (Asakusa)</a> — obanzai-style small plates + rice; calmer than Nakamise-only grazing.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sometaro+Asakusa+okonomiyaki" target="_blank" rel="noopener noreferrer">Sometaro (Asakusa)</a> — retro okonomiyaki / monja house (tatami + cook-at-table—check toddler tolerance).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Rokurinsha+Tokyo+Solamachi" target="_blank" rel="noopener noreferrer">Rokurinsha (Tokyo Solamachi)</a> — tsukemen shop with a cult following inside Skytree Town.
           </li>
         </ul>
         <div class="tips">
@@ -2024,6 +2181,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=kaiten+zushi+Ikebukuro" target="_blank" rel="noopener noreferrer">kaiten-zushi</a>, or mall
           <a href="https://www.google.com/maps/search/?api=1&query=teishoku+Sunshine+City+Ikebukuro" target="_blank" rel="noopener noreferrer">teishoku</a>.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=bills+Odaiba" target="_blank" rel="noopener noreferrer">bills Odaiba</a> — ricotta hotcakes / brunch with Rainbow Bridge views when you want a sit-down bay reset.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tsukiji+Gindaco+DiverCity+Tokyo" target="_blank" rel="noopener noreferrer">Tsukiji Gindaco (DiverCity)</a> — high-turnover takoyaki; good “walk + eat” between Gundam photos.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Mutekiya+Ikebukuro" target="_blank" rel="noopener noreferrer">Mutekiya (Ikebukuro)</a> — famous tonkotsu ramen near the station (expect a line at peak dinner).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hanabusaya+Ikebukuro" target="_blank" rel="noopener noreferrer">Hanabusaya (Ikebukuro)</a> — unagi hitsumabushi set menus when you want fish over pork after two bay days.
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Ikebukuro is the fragile link—if teamLab runs long, cut DiverCity browsing to photos-only; do not miss your own “leave Sunshine City” alarm.</li>
@@ -2168,6 +2340,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=Japanese+curry+Tama+Center" target="_blank" rel="noopener noreferrer">Japanese curry</a> or
           <a href="https://www.google.com/maps/search/?api=1&query=donburi+Tama+Center" target="_blank" rel="noopener noreferrer">donburi</a> shop is open.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sushiro+Tama+Center" target="_blank" rel="noopener noreferrer">Sushiro (Tama-Center)</a> — major kaiten chain near the station; tablets + fast plates when kids want sushi after characters.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=CoCo+Ichibanya+Tama+Center" target="_blank" rel="noopener noreferrer">CoCo Ichibanya (Tama-Center)</a> — customize-spice Japanese curry; fast seating for tired kids.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Udon+Honjin+Tama+Center" target="_blank" rel="noopener noreferrer">Udon Honjin / station-mall udon (Tama-Center)</a> — thick noodles + tempura sides; easy split checks.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Torikizoku+Tama+Center" target="_blank" rel="noopener noreferrer">Torikizoku (Tama-Center)</a> — cheap yakitori skewers + beer for adults (smoke-free shops vary—check the listing).
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Outbound and return commutes are real—treat in-park time as precious; skip optional zoo unless everyone slept well.</li>
@@ -2271,7 +2458,12 @@
             </figcaption>
           </figure>
           <figure class="venue">
-            <img loading="lazy" alt="Universal CityWalk Osaka" src="assets/venues/universal-studios-japan.png" />
+            <img
+              loading="lazy"
+              alt="Universal Studios Japan zone — park-adjacent dining and retail (reference photo)"
+              src="assets/venues/universal-citywalk-osaka.png"
+              data-carousel-slides="1"
+            />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Universal CityWalk Osaka</a></div>
               <p class="desc">After check-in: dinner and a low-key stroll in the USJ zone (park next door).</p>
@@ -2327,6 +2519,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=udon+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Osaka-style udon</a>, or
           <a href="https://www.google.com/maps/search/?api=1&query=kaiten+zushi+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">kaiten-zushi</a> over another generic burger; locals treat those as normal nights out.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Rokurinsha+Tokyo+Station" target="_blank" rel="noopener noreferrer">Rokurinsha (Tokyo Station)</a> — famous tsukemen in the Ramen Street cluster—grab before boarding if queues allow.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=GranSta+Tokyo+Station+bento" target="_blank" rel="noopener noreferrer">GranSta / Daimaru basement (Tokyo Station)</a> — premium ekiben + depachika bentō when you want a train meal that isn’t fried chicken.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=The+Park+Front+Hotel+buffet+Universal+Osaka" target="_blank" rel="noopener noreferrer">Park Front / hotel restaurants</a> — easy hotel dinner if CityWalk lines look brutal after check-in.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Hard Rock Cafe (CityWalk)</a> — predictable international menu when kids veto everything Japanese (still expect a wait).
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Shinkansen: stash snacks and a full water bottle per kid before you find your car—shop lines on the platform eat minutes.</li>
@@ -2350,7 +2557,7 @@
             <strong>July 1–2 (USJ):</strong> follow each park card’s <strong>Plan ahead</strong> the night before—this move puts <strong>both</strong> USJ days immediately after travel, so prioritize sleep and app screenshots over extra CityWalk loops.
           </li>
           <li>
-            <strong>July 3–4 (bay + castle):</strong> after the park sprint, you will want <strong>Kaiyukan</strong> tickets + a wheel strategy (see those days)—skim them tonight only if you still have brain cells.
+            <strong>July 3–4 (bay + castle):</strong> after the park sprint, you will want <strong>Kaiyukan</strong> timed tickets + a rough plan for the <strong>Tempozan Ferris Wheel</strong> queue same afternoon (see <strong>July 3</strong>)—skim them tonight only if you still have brain cells.
           </li>
         </ul>
       </details>
@@ -2424,7 +2631,12 @@
         </details>
         <div class="venue-inline">
           <figure class="venue">
-            <img loading="lazy" alt="Universal Studios Japan" src="assets/venues/universal-studios-japan.png" />
+            <img
+              loading="lazy"
+              alt="Universal Studios Japan — entrance globe, The Wizarding World of Harry Potter, Super Nintendo World, and park celebration art"
+              src="assets/venues/universal-studios-japan.png"
+              data-carousel-slides="1,2,3,4"
+            />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Universal Studios Japan</a></div>
               <p class="desc">Two-day plan focused on Nintendo World + Harry Potter/Minions.</p>
@@ -2473,6 +2685,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=ramen+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">ramen</a>, or
           <a href="https://www.google.com/maps/search/?api=1&query=kaiten+zushi+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">kaiten-zushi</a>; it’s still touristy real estate, but the <strong>cuisine types are everyday Osaka</strong>.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kin+no+Kura+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Kin no Kura / shabu chains (CityWalk)</a> — shared hot pot when you want vegetables + protein after coasters.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Naniwa+Kushikatsu+Daruma+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Kushikatsu Daruma (CityWalk)</a> — Osaka skewer icon; remember <strong>no double-dip</strong> in shared sauce.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kinopio%27s+Cafe+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Kinopio’s Cafe (Super Nintendo World)</a> — Mario-themed plates; check same-day reservation rules on the official USJ dining page.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Three+Broomsticks+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Three Broomsticks (in-park)</a> — fish-and-chips / roast plates in Hogsmeade when you want a themed sit-down.
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Split gate duty: one adult holds the line spot, one runs last bathroom + stroller check so you’re not scrambling at rope drop.</li>
@@ -2542,7 +2769,7 @@
               </tr>
               <tr>
                 <th scope="row">9:30pm–10:30pm</th>
-                <td><strong>Hotel</strong> — prep Kyoto day (July 6): IC cards charged, teamLab ticket QR screenshots, comfy shoes for temple steps / Inari slopes.</td>
+                <td><strong>Hotel</strong> — prep <strong>July 3</strong> bay day: confirm <strong>Kaiyukan</strong> timed-entry QR/screenshots, charge phones + portable battery, hats/sun layer for Tempozan marketplace / wheel queue, small bills for lockers or kiosks.</td>
               </tr>
               <tr>
                 <th scope="row">10:30pm–6:30am</th>
@@ -2560,7 +2787,12 @@
         </details>
         <div class="venue-inline">
           <figure class="venue">
-            <img loading="lazy" alt="Universal Studios Japan" src="assets/venues/universal-studios-japan.png" />
+            <img
+              loading="lazy"
+              alt="Universal Studios Japan — entrance globe, The Wizarding World of Harry Potter, Super Nintendo World, and park celebration art"
+              src="assets/venues/universal-studios-japan.png"
+              data-carousel-slides="1,2,3,4"
+            />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Universal Studios Japan</a></div>
               <p class="desc">Day 2—Harry Potter, Minions, shows, and anything you skipped yesterday.</p>
@@ -2601,6 +2833,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=ramen+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">ramen</a>,
           <a href="https://www.google.com/maps/search/?api=1&query=sushi+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">sushi</a>) rather than the most American-looking menu board.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Park+Side+Grill+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Park Side Grill (in-park)</a> — steak / hamburger plates with quieter seating than some quick counters.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Mel%27s+Drive-In+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Mel’s Drive-In (in-park)</a> — burgers / shakes when kids want familiar fries between Potter spells.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=The+Flying+Fish+Oyster+Bar+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">The Flying Fish Oyster Bar (CityWalk)</a> — seafood grill when adults want something off the fried theme-park loop.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Bubba+Gump+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Bubba Gump (CityWalk)</a> — tourist-chain comfort if the group splits tastes after two long park days.
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Order lands by yesterday’s waits: if Harry Potter ran long, hit it earlier today while others sleep in a bit.</li>
@@ -2610,17 +2857,17 @@
         <h3>Plan ahead</h3>
         <ul>
           <li>
-            <strong>Tomorrow (July 6 — Kyoto):</strong> confirm <strong>teamLab Biovortex</strong> date + entry time on the official <a href="https://www.teamlab.art/e/kyoto" target="_blank" rel="noopener noreferrer">teamLab</a> site (see <strong>When to book reservations</strong>), decide <strong>Fushimi Inari</strong> vs <strong>Kiyomizu / Ninenzaka</strong> for the afternoon (you may not fit both), pack a light layer for museum AC + sun gear for outdoor Kyoto, and finish laundry so Arashiyama clothes are ready for July 7.
+            <strong>Tomorrow (July 3 — Kaiyukan + Tempozan):</strong> reconfirm <strong>Kaiyukan</strong> entry window on the official site (see <strong>When to book reservations</strong>), screenshot or offline the tickets, and decide whether you want the <strong>Tempozan Ferris Wheel</strong> right after lunch or after a short marketplace break—<strong>July 4</strong> stays land-only (castle + Dotonbori), so do not defer the wheel to tomorrow. Pack hats, water, and a thin rain layer for the harbor breeze.
           </li>
         </ul>
       </details>
 
       <details>
-        <summary><span class="sum-title">Friday — July 3: Osaka Bay flex (Kaiyukan + Tempozan)</span><span class="sum-sub">Extra full day near the hotel—big aquarium + harbor marketplace; skip the Ferris wheel if you will ride it on <strong>July 4</strong> (castle + Tempozan day).</span></summary>
+        <summary><span class="sum-title">Friday — July 3: Osaka Aquarium Kaiyukan + Tempozan Ferris Wheel + bay</span><span class="sum-sub">Extra full day near the hotel—aquarium morning, marketplace lunch, Ferris wheel + optional harbor / seaside stroll afternoon; easy hotel return before <strong>July 4</strong> (castle + Dotonbori, no bay detour).</span></summary>
         <details class="day-hourly">
           <summary>Hour-by-hour timeline</summary>
           <p class="small">
-            JST. Book <strong>Kaiyukan</strong> entry ahead in summer (see <strong>When to book reservations</strong>). Goal: <strong>one big indoor anchor</strong>, early hotel return after back-to-back park days—<strong>July 4</strong> is the castle + Tempozan wheel + Dotonbori triangle.
+            JST. Book <strong>Kaiyukan</strong> entry ahead in summer (see <strong>When to book reservations</strong>). Goal: <strong>one big indoor anchor</strong>, then knock out the <strong>Tempozan Ferris Wheel</strong> in the same harbor district so <strong>July 4</strong> can stay land-only (castle + Dotonbori).
           </p>
           <table class="hour-table">
             <tbody>
@@ -2647,11 +2894,20 @@
                 </td>
               </tr>
               <tr>
-                <th scope="row">2:00pm–4:00pm</th>
-                <td><strong>Harbor stroll</strong> — photos, ice cream, slow toddler run; optional <a href="https://www.google.com/maps/search/?api=1&query=Legoland+Discovery+Center+Osaka" target="_blank" rel="noopener noreferrer">Legoland Discovery Center</a> only if ages fit and tickets were pre-booked.</td>
+                <th scope="row">2:00pm–3:45pm</th>
+                <td>
+                  <strong>Tempozan Ferris Wheel</strong> — queue + ride + photos; optional harbor breeze / ice cream right after lunch while you’re already in the district (<strong>Kaiyukan</strong> stays the morning block—don’t try to re-enter unless you bought a deliberate second pass).
+                </td>
               </tr>
               <tr>
-                <th scope="row">4:00pm–6:00pm</th>
+                <th scope="row">3:45pm–4:45pm</th>
+                <td>
+                  <strong>Optional harbor / seaside stroll</strong> — Tempozan marketplace photos, pier breeze, slow toddler run on nearby greens/promenade; optional
+                  <a href="https://www.google.com/maps/search/?api=1&query=Legoland+Discovery+Center+Osaka" target="_blank" rel="noopener noreferrer">Legoland Discovery Center</a> only if ages fit and tickets were pre-booked.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4:45pm–6:15pm</th>
                 <td><strong>Hotel rest</strong> — showers / lobby decompress; optional short <a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">CityWalk</a> snack—not a second full dinner crawl.</td>
               </tr>
               <tr>
@@ -2660,24 +2916,42 @@
               </tr>
               <tr>
                 <th scope="row">8:30pm–6:30am</th>
-                <td><strong>Sleep</strong> — bank rest before the castle + wheel + Dotonbori triangle.</td>
+                <td><strong>Sleep</strong> — bank rest before <strong>July 4</strong> castle + Dotonbori.</td>
               </tr>
             </tbody>
           </table>
           <div class="schedule-stretch">
             <h4>Stretch if ahead</h4>
             <ul>
-              <li>Second pass of favorite Kaiyukan windows if lines were short in the morning.</li>
-              <li><strong>Tempozan Ferris Wheel</strong> today only if you plan to <strong>skip it on July 4</strong>—otherwise defer for the dedicated bay leg tomorrow.</li>
+              <li>Second pass of favorite Kaiyukan windows if lines were short in the morning (only if you truly want more tank time—usually better to free the afternoon for the wheel + optional harbor stroll).</li>
+              <li>
+                <strong>Tempozan Ferris Wheel</strong> re-ride only if lines collapsed late afternoon and kids are begging—otherwise bank rest for <strong>July 4</strong>’s castle miles + Namba evening.
+              </li>
             </ul>
           </div>
         </details>
         <div class="venue-inline">
+          <figure class="venue kaiyukan-aquarium">
+            <img
+              loading="lazy"
+              alt="Osaka Aquarium Kaiyukan—penguin habitat, underwater shark tunnel, Tempozan plaza penguin display, and whale sharks in the main Pacific tank"
+              src="assets/venues/kaiyukan-osaka.png"
+              data-carousel-slides="1,2,3,4"
+            />
+            <figcaption>
+              <div class="name">
+                <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">Osaka Aquarium Kaiyukan</a>
+              </div>
+              <p class="desc">
+                Your <strong>July 3</strong> morning anchor in <code>Tempozan Harbor Village</code>—flip through four family photos (penguins, tunnel, plaza art near the wheel, Pacific tank). Timed entry in summer: see <strong>When to book reservations</strong>.
+              </p>
+            </figcaption>
+          </figure>
           <figure class="venue">
             <img loading="lazy" alt="Tempozan Ferris Wheel" src="assets/venues/tempozan-ferris-wheel.png" />
             <figcaption>
-              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan / Osaka Bay</a></div>
-              <p class="desc">Same district as Kaiyukan—market halls, harbor breeze, optional wheel (coordinate with July 4).</p>
+              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan Ferris Wheel</a></div>
+              <p class="desc">Same <code>Tempozan Harbor Village</code> pocket as <strong>Kaiyukan</strong>—ride it <strong>July 3</strong> after lunch so <strong>July 4</strong> stays castle + Dotonbori only.</p>
             </figcaption>
           </figure>
         </div>
@@ -2686,24 +2960,66 @@
           <li>Everything is clustered at <code>Tempozan Harbor Village</code>—minimal cross-town stress.</li>
           <li>Round-trip from Park Front: typically <strong>~50–80 min</strong> including buffers.</li>
         </ul>
+        <h3>Visits</h3>
+        <ul>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">Osaka Aquarium Kaiyukan</a> — main morning block (~<strong>2.5–3.5 hours</strong> incl. entry buffer).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan Ferris Wheel</a> — queue + ride ~<strong>45–75 min</strong> (variable); slotted <strong>July 3</strong> afternoon so you skip the bay detour on <strong>July 4</strong>.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Marketplace+Osaka" target="_blank" rel="noopener noreferrer">Tempozan Marketplace</a> + <strong>optional</strong> harbor / seaside promenade — lunch, snacks, and leg-stretch between aquarium and wheel.
+          </li>
+        </ul>
         <h3>Food — Japan-first picks</h3>
         <p class="small">
           Treat the marketplace like locals do: <a href="https://www.google.com/maps/search/?api=1&query=okonomiyaki+Tempozan" target="_blank" rel="noopener noreferrer">okonomiyaki</a> counters,
           <a href="https://www.google.com/maps/search/?api=1&query=teishoku+Osaka+Bay" target="_blank" rel="noopener noreferrer">teishoku</a>, and
           <a href="https://www.google.com/maps/search/?api=1&query=karaage+bento+Osaka" target="_blank" rel="noopener noreferrer">karaage bentō</a> beat another generic burger.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Naniwa+Kuishinbo+Yokocho+Tempozan" target="_blank" rel="noopener noreferrer">Naniwa Kuishinbo Yokocho (Tempozan Marketplace)</a> — retro-street food court with okonomiyaki, kushikatsu, and takoyaki stalls in one roof.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cremia+soft+serve+Tempozan+Marketplace" target="_blank" rel="noopener noreferrer">Cremia / soft-serve kiosks (Tempozan Marketplace)</a> — quick harbor-view sweets between wheel photos.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=kaiten+zushi+Tempozan+Marketplace" target="_blank" rel="noopener noreferrer">Kaiten-zushi counters (Tempozan)</a> — belt sushi when kids want fish after the aquarium loop; check the live map for the shortest queue.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lawson+Tempozan+Harbor+Village" target="_blank" rel="noopener noreferrer">Harbor Village Lawson / mall depachika</a> — bentō backup if every restaurant line peaks at the same post-aquarium minute.
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Strollers: Kaiyukan can bottleneck at escalators—send one adult ahead to spot elevator lines.</li>
-          <li>Keep <strong>July 4</strong> in mind before buying duplicate bay tickets (wheel especially).</li>
+          <li>
+            <strong>Ferris wheel:</strong> buy ride tickets at the Tempozan kiosk when you land for lunch—summer Friday afternoons can still stack a queue right when families exit the aquarium hungry.
+          </li>
+        </ul>
+        <h3>Optional — if time &amp; interest</h3>
+        <ul>
+          <li>
+            <strong>Osaka Bay seaside greens (optional):</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Park+Osaka+Bay" target="_blank" rel="noopener noreferrer">Tempozan Park</a> / longer harbor promenade—open-air run-around after the wheel if everyone still has bounce (~<strong>20–45 min</strong>). Skip entirely if you need an early hotel nap before <strong>July 4</strong> castle miles.
+          </li>
+        </ul>
+        <h3>Plan ahead</h3>
+        <ul>
+          <li>
+            <strong>Tomorrow (July 4 — Osaka Castle + Dotonbori):</strong> outdoor miles and midday heat—front-load <strong>water</strong>, confirm whether you want the <strong>keep interior</strong> queue or lawns-only, and decide yes/no on the <a href="https://www.google.com/maps/search/?api=1&query=Tombori+River+Cruise+Dotonbori" target="_blank" rel="noopener noreferrer">Tombori River Cruise</a> (often smoother if you check same-day slots). Stash <strong>cash</strong> for small Namba vendors; plan an easy hotel path home after neon crowds. If you might trade the long afternoon hotel break for <strong>Minoo Park</strong> (Minoh waterfall walk), skim <strong>Hankyu Minoo</strong> last-train times from <strong>Umeda</strong> tonight—details on the July 4 card.
+          </li>
         </ul>
       </details>
 
       <details>
-        <summary><span class="sum-title">Saturday — July 4: Osaka Castle + Tempozan wheel + Dotonbori</span><span class="sum-sub">Castle morning, bay Ferris wheel after lunch, neon canal dinner.</span></summary>
+        <summary><span class="sum-title">Saturday — July 4: Osaka Castle + Dotonbori</span><span class="sum-sub">Castle morning, hotel buffer or light shopping, neon canal dinner—recommended optional <strong>Tombori River Cruise</strong> (short Dotonbori boat ride under the signs).</span></summary>
         <details class="day-hourly">
           <summary>Hour-by-hour timeline</summary>
-          <p class="small">JST. Castle is outdoor—front-load water before midday heat. Bay detour adds transfers—skip the wheel if lines or toddler naps demand it (you may have done <strong>Kaiyukan</strong> on <strong>July 3</strong>—still fine to ride the wheel today if you skipped it then).</p>
+          <p class="small">JST. Castle is outdoor—front-load water before midday heat. <strong>Tempozan Ferris Wheel</strong> already ran on <strong>July 3</strong>—today stays land-side (castle + Namba/Dotonbori) so you’re not bouncing back to the bay.</p>
           <table class="hour-table">
             <tbody>
               <tr>
@@ -2730,26 +3046,25 @@
                 </td>
               </tr>
               <tr>
-                <th scope="row">1:30pm–2:15pm</th>
+                <th scope="row">1:30pm–4:00pm</th>
                 <td>
-                  <strong>Travel</strong> — castle area →
-                  <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan</a> / Osaka Bay (~<strong>25–45 min</strong>; subway + walk).
+                  <strong>Hotel / rest buffer</strong> — optional return to the USJ zone for nap, pool, laundry, or quiet lobby time after castle heat; <em>or</em> linger near
+                  <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Business+Park" target="_blank" rel="noopener noreferrer">Osaka Business Park</a> / Morinomiya cafés if everyone is still wired; <em>or</em> (big energy trade) a <strong>Minoo Park</strong> half-day—see <strong>Optional — if time &amp; interest</strong>. Goal: calm legs before Namba crowds unless you consciously choose the forest walk.
                 </td>
               </tr>
               <tr>
-                <th scope="row">2:15pm–3:45pm</th>
+                <th scope="row">4:00pm–5:00pm</th>
                 <td>
-                  <strong>Tempozan Ferris Wheel</strong> — queue + ride + photos; optional harbor breeze / ice cream (<strong>Kaiyukan</strong> is optional only if you add it separately—this day is wheel + Dotonbori).
+                  <strong>Travel</strong> — hotel (or castle corridor) →
+                  <a href="https://www.google.com/maps/search/?api=1&query=Namba+Station+Osaka" target="_blank" rel="noopener noreferrer">Namba</a> /
+                  <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a> (~<strong>35–55 min</strong> door-to-door depending on start point).
                 </td>
-              </tr>
-              <tr>
-                <th scope="row">3:45pm–5:00pm</th>
-                <td><strong>Travel + buffer</strong> — Bay → hotel nap <em>or</em> straight toward Namba—choose based on toddler battery.</td>
               </tr>
               <tr>
                 <th scope="row">5:00pm–8:30pm</th>
                 <td>
-                  <strong>Dotonbori evening</strong> — neon walk; graze
+                  <strong>Dotonbori evening</strong> — start with the recommended
+                  <a href="https://www.google.com/maps/search/?api=1&query=Tombori+River+Cruise+Dotonbori" target="_blank" rel="noopener noreferrer">Tombori River Cruise</a> (~<strong>20 min</strong> on the canal under the Glico sign and neon—buy tickets at the dock kiosk first; may pause in heavy rain). Then neon walk; graze
                   <a href="https://www.google.com/maps/search/?api=1&query=Kukuru+Takoyaki+Dotonbori" target="_blank" rel="noopener noreferrer">takoyaki</a>,
                   <a href="https://www.google.com/maps/search/?api=1&query=Mizuno+Okonomiyaki+Dotonbori" target="_blank" rel="noopener noreferrer">okonomiyaki</a> (book/wait),
                   <a href="https://www.google.com/maps/search/?api=1&query=Kushikatsu+Daruma+Dotonbori" target="_blank" rel="noopener noreferrer">kushikatsu</a>,
@@ -2773,9 +3088,13 @@
           <div class="schedule-stretch">
             <h4>Stretch if ahead</h4>
             <ul>
-              <li>Osaka Museum of History viewpoint combo, longer castle moat walk, extra street-food passes in Dotonbori.</li>
-              <li>Skip Tempozan if the line is brutal—hotel nap + Dotonbori still delivers a full Osaka day.</li>
-              <li>Skip hotel siesta and add Shinsaibashi covered arcade browsing.</li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Tombori+River+Cruise+Dotonbori" target="_blank" rel="noopener noreferrer">Tombori River Cruise</a> if you skipped it in the main block—last departures are usually <strong>early evening</strong>; ticket window lines add ~<strong>15–25 min</strong> on busy Saturdays.
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Museum+of+History" target="_blank" rel="noopener noreferrer">Osaka Museum of History</a> viewpoint combo, longer castle moat walk, extra street-food passes in Dotonbori.
+              </li>
+              <li>Skip the hotel siesta and add early <a href="https://www.google.com/maps/search/?api=1&query=Shinsaibashi+Shopping+Arcade" target="_blank" rel="noopener noreferrer">Shinsaibashi</a> arcade browsing before Dotonbori lights.</li>
               <li>Queue once for a famous Dotonbori ramen bowl (<a href="https://www.google.com/maps/search/?api=1&query=Kinryu+Ramen+Dotonbori" target="_blank" rel="noopener noreferrer">Kinryu</a> dragon sign or <a href="https://www.google.com/maps/search/?api=1&query=Hanamaruken+Ramen+Dotonbori" target="_blank" rel="noopener noreferrer">Hanamaruken</a> pork rib) if you want a sit-down “Osaka ramen” memory.</li>
               <li>Split dinner: okonomiyaki for adults + takoyaki / kaiten for kids, or one long kushikatsu stop (no double-dipping—follow house rules).</li>
             </ul>
@@ -2790,52 +3109,46 @@
             </figcaption>
           </figure>
           <figure class="venue">
-            <img loading="lazy" alt="Tempozan Ferris Wheel" src="assets/venues/tempozan-ferris-wheel.png" />
-            <figcaption>
-              <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan Ferris Wheel</a></div>
-              <p class="desc">Bay views without committing to a full aquarium block—pair with a short harbor stroll if energy holds.</p>
-            </figcaption>
-          </figure>
-          <figure class="venue">
             <img loading="lazy" alt="Dotonbori" src="assets/venues/dotonbori.png" />
             <figcaption>
               <div class="name"><a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a></div>
-              <p class="desc">Neon canal stroll with easy street-food dinner options.</p>
+              <p class="desc">Neon canal stroll with easy street-food dinner options—recommended <strong>Tombori River Cruise</strong> first for a kid-friendly “we’re in Osaka” view from the water.</p>
             </figcaption>
           </figure>
         </div>
         <div class="route-card">
           <div class="route-head">
-            <div class="route-title">Route map (Osaka Castle → Tempozan → Dotonbori)</div>
-            <div class="pill">Bay is a detour—budget transfers</div>
+            <div class="route-title">Route map (hotel → Osaka Castle → Dotonbori)</div>
+            <div class="pill">No bay detour—Tempozan wheel was July 3</div>
           </div>
           <iframe
             class="map-embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=Osaka+Castle&daddr=Tempozan+Ferris+Wheel"
-            title="Osaka Castle to Tempozan Ferris Wheel"
+            src="https://www.google.com/maps?output=embed&f=d&source=s_d&saddr=The+Park+Front+Hotel+Universal+Studios+Japan&daddr=Osaka+Castle"
+            title="The Park Front Hotel to Osaka Castle"
           ></iframe>
           <div class="small" style="margin-top: 8px">
             Open in Maps:
             <a href="https://www.google.com/maps/dir/?api=1&origin=The+Park+Front+Hotel+Universal+Studios+Japan&destination=Osaka+Castle" target="_blank" rel="noopener noreferrer">Hotel → Osaka Castle</a>
             ·
-            <a href="https://www.google.com/maps/dir/?api=1&origin=Osaka+Castle&destination=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Castle → Tempozan</a>
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Osaka+Castle&destination=Dotonbori" target="_blank" rel="noopener noreferrer">Castle → Dotonbori</a>
             ·
-            <a href="https://www.google.com/maps/dir/?api=1&origin=Tempozan+Ferris+Wheel&destination=Dotonbori" target="_blank" rel="noopener noreferrer">Tempozan → Dotonbori</a>.
+            <a href="https://www.google.com/maps/search/?api=1&query=Tombori+River+Cruise+ticket+office+Dotonbori" target="_blank" rel="noopener noreferrer">Tombori River Cruise (dock / tickets)</a>.
           </div>
         </div>
         <h3>Proximity & timing</h3>
         <ul>
-          <li>Morning at <code>Osaka Castle</code>, afternoon <code>Tempozan</code> (bay), evening <code>Dotonbori</code>.</li>
-          <li>Castle ↔ Dotonbori (direct): typically <strong>~25–35 min</strong>; inserting the bay leg adds <strong>~50–80 min</strong> round-trip transfer time on top of the ride itself.</li>
+          <li>Morning at <code>Osaka Castle</code>, evening <code>Dotonbori</code> / Namba—afternoon is intentionally loose (hotel rest, light shopping, or optional <strong>Minoo Park</strong> / Minoh waterfall—see Optional).</li>
+          <li>Castle ↔ Dotonbori direct: typically <strong>~25–35 min</strong> by train; hotel ↔ Dotonbori often <strong>~35–50 min</strong> depending on line choice.</li>
           <li>Hotel → Osaka Castle area: typically <strong>~20–25 min</strong>.</li>
         </ul>
         <h3>Visits</h3>
         <ul>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank" rel="noopener noreferrer">Osaka Castle</a> — time budget ~<strong>2–2.5 hours</strong></li>
-          <li><a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan Ferris Wheel</a> — queue + ride ~<strong>45–75 min</strong> (variable)</li>
-          <li>Evening: <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a> dinner and stroll (~<strong>2–3 hours</strong>)</li>
+          <li>
+            Evening: <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a> — recommended
+            <a href="https://www.google.com/maps/search/?api=1&query=Tombori+River+Cruise+Dotonbori" target="_blank" rel="noopener noreferrer">Tombori River Cruise</a> (~<strong>20 min</strong> ride + ~<strong>15–25 min</strong> ticketing/queue buffer) then dinner and stroll (~<strong>2–3 hours</strong> total in Namba).</li>
         </ul>
         <h3>Food options — lunch (Osaka Castle area)</h3>
         <ul>
@@ -2853,8 +3166,24 @@
             or <a href="https://www.google.com/maps/search/?api=1&query=tonkatsu+Osaka+Jo" target="_blank" rel="noopener noreferrer">tonkatsu teishoku</a> near a station (~<strong>30–45 min</strong>).
           </li>
         </ul>
+        <h4 class="food-rated">Highly rated — lunch (castle area)</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=551+Horai+Osaka+Castle" target="_blank" rel="noopener noreferrer">551 Horai butaman (Morinomiya / castle corridor)</a> — iconic Osaka pork buns for a fast takeaway near the park exits.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tsuruhashi+Fugetsu+Okonomiyaki+Osaka+Jo" target="_blank" rel="noopener noreferrer">Tsuruhashi Fugetsu (Osaka Castle vicinity)</a> — okonomiyaki chain with clearer English menus than some tiny stalls.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Udon+Muginbo+Osaka+Castle" target="_blank" rel="noopener noreferrer">Muginbo / mall udon (Morinomiya)</a> — thick udon + tempura when you want noodles inside A/C malls near the park.
+          </li>
+        </ul>
         <h3>Food options — dinner (Dotonbori / Namba)</h3>
         <ul>
+          <li>
+            <strong>Recommended opener:</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tombori+River+Cruise+Dotonbori" target="_blank" rel="noopener noreferrer">Tombori River Cruise</a> — short sightseeing boat on the Dotonbori canal; easy “wow” for kids before grazing. Check same-day departures at the ticket office; strollers usually fold or park per crew instructions.
+          </li>
           <li>
             Takoyaki along the canal—e.g.
             <a href="https://www.google.com/maps/search/?api=1&query=Kukuru+Takoyaki+Dotonbori" target="_blank" rel="noopener noreferrer">Kukuru</a> or
@@ -2878,6 +3207,18 @@
             <a href="https://www.google.com/maps/search/?api=1&query=Kura+Sushi+Namba" target="_blank" rel="noopener noreferrer">Kura Sushi</a> (Namba)—major kaiten chains; tablet ordering, high chair–friendly pacing (~<strong>60–90 min</strong>).
           </li>
         </ul>
+        <h4 class="food-rated">Highly rated — dinner (Namba / Dotonbori)</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Harukoma+Sushi+Dotonbori" target="_blank" rel="noopener noreferrer">Harukoma (Dotonbori)</a> — old-school counter sushi; small room so split the group if needed.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Zuboraya+fugu+Dotonbori" target="_blank" rel="noopener noreferrer">Zubora-ya / fugu signage lane (Dotonbori)</a> — photo-famous pufferfish façades; some shops offer safer grilled sets—confirm English allergy cards if trying fugu.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hozenji+Sanpei+Okonomiyaki+Namba" target="_blank" rel="noopener noreferrer">Hozenji Sanpei (Hozen-ji Yokocho)</a> — intimate okonomiyaki near the moss alley when you want calm off the neon drag.
+          </li>
+        </ul>
         <h3>Optional dinner (Dotonbori ramen)</h3>
         <ul>
           <li>
@@ -2895,14 +3236,36 @@
           <a href="https://www.google.com/maps/search/?api=1&query=Ura+Namba+Osaka" target="_blank" rel="noopener noreferrer">Ura Namba</a> for standing
           <a href="https://www.google.com/maps/search/?api=1&query=tachinomiya+Ura+Namba" target="_blank" rel="noopener noreferrer">tachinomiya</a> and small kushikatsu shops full of office workers.
         </p>
+        <h4 class="food-rated">Highly rated — more Osaka classics</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Matsusakagyu+Yakiniku+M+Hozenji" target="_blank" rel="noopener noreferrer">Matsusaka-gyu yakiniku (Namba / Hozenji corridor)</a> — premium beef sets when you want one splurge dinner.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kani+Douraku+Dotonbori" target="_blank" rel="noopener noreferrer">Kani Doraku (Dotonbori)</a> — crab specialist with the giant moving sign—touristy but consistent for families who want shellfish.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Gram+Cafe+Pancakes+Shinsaibashi" target="_blank" rel="noopener noreferrer">Gram / soufflé pancake cafés (Shinsaibashi)</a> — dessert dinner if savory lines are insane (expect a wait).
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Castle grounds are mostly sun—front-load water and hats before midday; consider keep interior only if the line and heat feel worth it.</li>
           <li>At kushikatsu spots, <strong>no double-dipping</strong> the shared sauce—use the cabbage scoop or ask for extra sauce if needed.</li>
+          <li>
+            <strong>Tombori River Cruise:</strong> buy tickets at the dock <strong>before</strong> you disappear into food lines—Saturday evenings can sell out a departure or two ahead; if rain is heavy, service may pause, so keep the walk-and-graze plan as backup.
+          </li>
           <li>Dotonbori is loud and late—if kids flag, a calmer parallel street or early hotel wind-down beats forcing the full neon crawl.</li>
         </ul>
         <h3>Optional — if time &amp; interest</h3>
         <ul>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Minoh+Falls+Minoo+Osaka" target="_blank" rel="noopener noreferrer">Minoo Park (Minoh) + Minoh Falls</a> (箕面大滝) — best <strong>July 4</strong> slot: swap part or all of the long afternoon <strong>hotel / rest buffer</strong> for a shady riverside walk (mostly paved, some steps near the falls). Expect <strong>wild monkeys</strong>—no feeding, keep snacks sealed. Try <strong>momiji tempura</strong> from the trail vendors if the line is sane. Transit: typically <strong>USJ hotel zone → Osaka/Umeda → Hankyu Minoo</strong> (~<strong>50–90 min</strong> each way) plus <strong>~2–3 h</strong> round-trip on the trail with photos—skip if you need easy legs before <strong>July 5</strong> Nara or if humid <strong>July</strong> makes extra hiking feel punishing.
+          </li>
+          <li>
+            Second run of the
+            <a href="https://www.google.com/maps/search/?api=1&query=Tombori+River+Cruise+Dotonbori" target="_blank" rel="noopener noreferrer">Tombori River Cruise</a> only if someone missed the first loop—otherwise spend the minutes on <a href="https://www.google.com/maps/search/?api=1&query=Shinsaibashi+Shopping+Arcade" target="_blank" rel="noopener noreferrer">Shinsaibashi</a> arcade air-con.
+          </li>
           <li>
             <a href="https://www.google.com/maps/search/?api=1&query=Shitennoji+Osaka" target="_blank" rel="noopener noreferrer">Shitennō-ji</a> — Japan’s oldest official temple (rebuilt); calmer than Dotonbori energy (~<strong>45–75 min</strong> incl. travel from castle corridor).
           </li>
@@ -2913,6 +3276,27 @@
             <a href="https://www.google.com/maps/search/?api=1&query=Namba+Parks+Osaka" target="_blank" rel="noopener noreferrer">Namba Parks</a> rooftop garden—green escape above the neon if you need a breather before dinner (~<strong>20–40 min</strong>).
           </li>
           <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Museum+of+History" target="_blank" rel="noopener noreferrer">Osaka Museum of History</a> — A/C + city story exhibits; upper floors frame <strong>Osaka Castle</strong> like a postcard—easy add if you skip keep interior or shorten lawn time (~<strong>60–90 min</strong>; pair with lunch at <a href="https://www.google.com/maps/search/?api=1&query=NHK+Osaka+Hall+restaurants" target="_blank" rel="noopener noreferrer">NHK Osaka / museum block cafés</a>).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Nishinomaru+Garden+Osaka+Castle" target="_blank" rel="noopener noreferrer">Nishinomaru Garden</a> (castle park) — paid inner garden + classic keep views; calmer photo path than the main plaza (~<strong>30–50 min</strong>).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Miraiza+Osaka-jo" target="_blank" rel="noopener noreferrer">Miraiza Osaka-jo</a> — gift shops, sweets, and a sit-down café inside restored castle-outbuilding stonework—handy if someone needs shade right at the park (~<strong>20–40 min</strong> browse).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market+Osaka" target="_blank" rel="noopener noreferrer">Kuromon Ichiba Market</a> — covered “Osaka kitchen” snack lane a few blocks east of Namba; best as a <strong>late lunch / early afternoon</strong> graze if you skip the long hotel siesta (~<strong>45–75 min</strong>).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hozenji+Yokocho+Osaka" target="_blank" rel="noopener noreferrer">Hozen-ji Yokocho</a> + <a href="https://www.google.com/maps/search/?api=1&query=Hozenji+Temple+Osaka" target="_blank" rel="noopener noreferrer">Hōzen-ji</a> — lantern alley and moss-covered Fudo steps; <strong>two minutes</strong> off the Dotonbori chaos for a mood reset before dinner (~<strong>15–30 min</strong>).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Doguyasuji+Shopping+Street+Osaka" target="_blank" rel="noopener noreferrer">Dōguyasuji Shotengai</a> (“Kitchenware Street”) — plastic food samples, knives, and restaurant-supply window shopping; oddball fun between Namba and Nippombashi (~<strong>20–40 min</strong>).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=America-mura+Osaka" target="_blank" rel="noopener noreferrer">Amerikamura</a> — triangle of indie cafés, vintage shops, and streetwear a block west of Shinsaibashi; good teen energy, easy to skip with toddlers (~<strong>30–60 min</strong>).
+          </li>
+          <li>
             <strong>Deep cut (usually too far):</strong>
             <a href="https://www.google.com/maps/search/?api=1&query=Cup+Noodles+Museum+Osaka+Ikeda" target="_blank" rel="noopener noreferrer">Momofuku Ando Instant Ramen Museum (Ikeda)</a> — only if someone is obsessed with cup noodles and you sacrifice castle or Dotonbori depth.
           </li>
@@ -2920,16 +3304,16 @@
         <h3>Plan ahead</h3>
         <ul>
           <li>
-            <strong>Tomorrow (July 5 — Nara deer day):</strong> small bills/coins for deer crackers, earlier start if heat is forecast, wipes in every pocket, and a clear “one cracker at a time” rule rehearsal with kids.
+            <strong>Tomorrow (July 5 — Nara + optional Mt. Ikoma):</strong> small bills/coins for deer crackers, earlier start if heat is forecast, wipes in every pocket, and a clear “one cracker at a time” rule rehearsal with kids. If you want the summit views, skim <strong>Kintetsu Nara → Ikoma</strong> timing and the <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Cable+Car+Toriimae" target="_blank" rel="noopener noreferrer">Ikoma Cable Car</a> <strong>last descent</strong> tonight while you’re fresh—July heat makes a short summit visit smarter than a long amusement crawl.
           </li>
         </ul>
       </details>
 
       <details>
-        <summary><span class="sum-title">Sunday — July 5: Nara deer day</span><span class="sum-sub">Deer feeding + a giant Buddha—lots of walking with plenty of open space.</span></summary>
+        <summary><span class="sum-title">Sunday — July 5: Nara deer day + optional Mt. Ikoma views</span><span class="sum-sub">Morning deer + Tōdai-ji, then (if legs allow) <strong>Kintetsu</strong> to <strong>Ikoma</strong> for the two-stage <strong>Ikoma Cable Car</strong> and small <strong>summit amusement park</strong>—big views over the plain on the way back toward Osaka.</span></summary>
         <details class="day-hourly">
           <summary>Hour-by-hour timeline</summary>
-          <p class="small">JST. Deer are calmer earlier—bias toward <strong>morning Nara Park</strong> when possible.</p>
+          <p class="small">JST. Deer are calmer earlier—bias toward <strong>morning Nara Park</strong> when possible. <strong>Mt. Ikoma</strong> is optional: skip it for an easy afternoon + earlier hotel dinner if heat or toddler batteries say no—the cable car and summit are mostly <strong>unshaded</strong>.</p>
           <table class="hour-table">
             <tbody>
               <tr>
@@ -2959,23 +3343,40 @@
                 </td>
               </tr>
               <tr>
-                <th scope="row">2:30pm–4:00pm</th>
-                <td><strong>Soft afternoon</strong> — gift shops, park bench, toddler run space.</td>
+                <th scope="row">2:30pm–3:15pm</th>
+                <td><strong>Soft afternoon / exit Nara</strong> — last gift shops, shaded bench, toddler run space; start drifting toward <a href="https://www.google.com/maps/search/?api=1&query=Kintetsu+Nara+Station" target="_blank" rel="noopener noreferrer">Kintetsu Nara Station</a> (not JR) if you’re doing Ikoma.</td>
               </tr>
               <tr>
-                <th scope="row">4:00pm–5:30pm</th>
-                <td><strong>Travel back</strong> — Nara → Osaka hotel.</td>
-              </tr>
-              <tr>
-                <th scope="row">5:30pm–7:30pm</th>
+                <th scope="row">3:15pm–4:00pm</th>
                 <td>
-                  <strong>Hotel dinner</strong> —
-                  <a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">CityWalk</a> or easy near hotel.
+                  <strong>Travel</strong> —
+                  <a href="https://www.google.com/maps/search/?api=1&query=Kintetsu+Nara+Station" target="_blank" rel="noopener noreferrer">Kintetsu Nara</a> →
+                  <a href="https://www.google.com/maps/search/?api=1&query=Kintetsu+Ikoma+Station" target="_blank" rel="noopener noreferrer">Ikoma</a> (Namba / Osaka direction; often <strong>~30–40 min</strong>).
+                  <em>Skip this row if heading home:</em> JR or Kintetsu straight to Namba / Osaka and JR loop to the USJ hotel instead.
                 </td>
               </tr>
               <tr>
-                <th scope="row">7:30pm–9:30pm</th>
-                <td><strong>Wind-down</strong> — laundry; pack Kyoto / day-trip bag; early night before the Kyoto day trip.</td>
+                <th scope="row">4:00pm–6:15pm</th>
+                <td>
+                  <strong>Mt. Ikoma — cable car + summit</strong> — from Ikoma, follow signs to
+                  <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Cable+Car+Toriimae" target="_blank" rel="noopener noreferrer">Tōriimae</a> (lower cable car); ride both stages to the top for <strong>wide plain + sunset-leaning views</strong>. At the summit:
+                  <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Sanjo+Amusement+Park" target="_blank" rel="noopener noreferrer">Ikoma Sanjo Amusement Park</a> is small/retro—prioritize <strong>lookouts + one or two rides</strong>, not a full park sweep. <strong>Confirm last car down</strong> the day you go and aim to ride <strong>before</strong> the final minutes.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">6:15pm–8:00pm</th>
+                <td>
+                  <strong>Travel back</strong> — cable car down to Ikoma, then Kintetsu toward
+                  <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Namba+Station" target="_blank" rel="noopener noreferrer">Osaka-Namba</a>, then JR loop line toward
+                  <a href="https://www.google.com/maps/search/?api=1&query=Universal+City+Station+Osaka" target="_blank" rel="noopener noreferrer">Universal City</a> / hotel (often <strong>~50–70 min</strong> door-to-door from summit timing).
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">8:00pm–9:30pm</th>
+                <td>
+                  <strong>Late hotel dinner + wind-down</strong> —
+                  <a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">CityWalk</a> or easy near hotel; laundry; pack Kyoto / day-trip bag; earlier night if you skipped Ikoma (<strong>~6:00pm–9:00pm</strong> dinner window instead).
+                </td>
               </tr>
               <tr>
                 <th scope="row">9:30pm–6:30am</th>
@@ -2987,7 +3388,14 @@
             <h4>Stretch if ahead</h4>
             <ul>
               <li>Nara National Museum (if open/interest), Kasuga area stroll, extra deer time with strict cracker rules.</li>
-              <li>Leave Nara early if heat spikes—swap afternoon for hotel pool.</li>
+              <li>Extra summit time on Ikoma (more rides) only if everyone is still shaded-water happy—otherwise keep it to <strong>views + down</strong>.</li>
+            </ul>
+          </div>
+          <div class="schedule-stretch">
+            <h4>Cut if behind</h4>
+            <ul>
+              <li>Skip <strong>Mt. Ikoma</strong> entirely—take Kintetsu or JR straight from Nara toward Osaka and trade the views for <strong>hotel pool / early dinner</strong>.</li>
+              <li>Shorten Tōdai-ji or lunch to protect the cable car window if you’re committed to Ikoma that day.</li>
             </ul>
           </div>
         </details>
@@ -3010,13 +3418,18 @@
         <h3>Proximity & timing</h3>
         <ul>
           <li>Main stops are in/around <code>Nara Park</code>, so it’s very walkable.</li>
-          <li>Time budget: <strong>~6–8 hours</strong>.</li>
-          <li>Osaka → Nara: usually <strong>~45–60 min</strong> (door-to-door can be <strong>~60–75 min</strong>).</li>
+          <li>Time budget: <strong>~8–11 hours</strong> out if you include Ikoma; <strong>~6–8 hours</strong> if you skip the mountain and return straight from Nara.</li>
+          <li>Osaka (USJ hotel) → Nara: usually <strong>~45–60 min</strong> (door-to-door can be <strong>~60–75 min</strong>).</li>
+          <li>
+            <strong>Ikoma detour:</strong> sits on the <strong>Kintetsu Nara Line</strong> between
+            <a href="https://www.google.com/maps/search/?api=1&query=Kintetsu+Nara+Station" target="_blank" rel="noopener noreferrer">Kintetsu Nara</a> and
+            <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Namba+Station" target="_blank" rel="noopener noreferrer">Osaka-Namba</a>—natural <strong>return</strong> stop, not a morning out-and-back from the hotel.
+          </li>
         </ul>
         <div class="route-card">
           <div class="route-head">
-            <div class="route-title">Route map (30+ min commute)</div>
-            <div class="pill">Typical: 60–75 min door-to-door</div>
+            <div class="route-title">Route map (outbound)</div>
+            <div class="pill">Hotel → Nara Park (~60–75 min)</div>
           </div>
           <iframe
             class="map-embed"
@@ -3029,13 +3442,27 @@
             Open in Maps:
             <a href="https://www.google.com/maps/dir/?api=1&origin=The+Park+Front+Hotel+Universal+Studios+Japan&destination=Nara+Park" target="_blank" rel="noopener noreferrer">Hotel → Nara Park</a>
             ·
-            <a href="https://www.google.com/maps/dir/?api=1&origin=Nara+Park&destination=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Nara → hotel (return)</a>.
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Nara+Park&destination=Kintetsu+Nara+Station" target="_blank" rel="noopener noreferrer">Nara Park → Kintetsu Nara</a>
+            ·
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Kintetsu+Nara+Station&destination=Kintetsu+Ikoma+Station" target="_blank" rel="noopener noreferrer">Kintetsu Nara → Ikoma</a>
+            ·
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Kintetsu+Ikoma+Station&destination=Osaka+Namba+Station" target="_blank" rel="noopener noreferrer">Ikoma → Osaka-Namba</a>
+            ·
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Osaka+Namba+Station&destination=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Namba → hotel</a>
+            ·
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Nara+Park&destination=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Nara → hotel (no Ikoma)</a>.
           </div>
         </div>
         <h3>Plan</h3>
         <ul>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Nara+Park" target="_blank" rel="noopener noreferrer">Nara Park</a> — feed deer (~<strong>1.5–2.5 hours</strong>)</li>
           <li>Then <a href="https://www.google.com/maps/search/?api=1&query=Todai-ji" target="_blank" rel="noopener noreferrer">Todai-ji</a> — ~<strong>60–90 min</strong></li>
+          <li>
+            Optional return arc: <a href="https://www.google.com/maps/search/?api=1&query=Kintetsu+Nara+Station" target="_blank" rel="noopener noreferrer">Kintetsu Nara</a> →
+            <a href="https://www.google.com/maps/search/?api=1&query=Kintetsu+Ikoma+Station" target="_blank" rel="noopener noreferrer">Ikoma</a> →
+            <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Cable+Car+Toriimae" target="_blank" rel="noopener noreferrer">Ikoma Cable Car</a> (two stages) →
+            <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Sanjo+Amusement+Park" target="_blank" rel="noopener noreferrer">summit amusement area</a> — ~<strong>2–3 hours</strong> including rides/photos and descent buffer
+          </li>
         </ul>
         <h3>Food — Japan-first picks</h3>
         <p class="small">
@@ -3053,6 +3480,21 @@
             <a href="https://www.google.com/maps/search/?api=1&query=teishoku+Naramachi" target="_blank" rel="noopener noreferrer">Naramachi teishoku</a>
           </li>
         </ul>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Edogawa+Naramachi+Nara" target="_blank" rel="noopener noreferrer">Edogawa (Naramachi)</a> — multi-gen tempura / washoku in a machiya setting; book or arrive early.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=kamameshi+Nara+Station" target="_blank" rel="noopener noreferrer">Kamameshi / kettle-rice shops (near Nara / Kintetsu stations)</a> — one-pot rice sets that travel well for tired kids; check maps for the shortest walk from your exit.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Nakatanidou+mochi+Nara" target="_blank" rel="noopener noreferrer">Nakatanidou (Nara)</a> — famous fast-pounded mochi show + sweets near the park edge (snack, not full lunch).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Maguro+Koya+Nara" target="_blank" rel="noopener noreferrer">Maguro Koya (Nara)</a> — tuna-focused set meals when someone wants protein after deer walking.
+          </li>
+        </ul>
         <div class="tips">
           <h4>Family of 6 tips</h4>
           <ul>
@@ -3064,14 +3506,27 @@
             <li>Deer can head-butt for food—keep crackers in a bag and teach kids to step back.</li>
             <li>Todai-ji is impressive but can feel long—plan a snack break immediately after.</li>
           </ul>
+          <h4>Venue tips (Mt. Ikoma)</h4>
+          <ul>
+            <li>Two-stage cable car: budget a few extra minutes for the mid transfer if little legs are tired.</li>
+            <li>Last descent times are the real deadline—screenshot or write them down before you go up.</li>
+          </ul>
         </div>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Morning deer are calmer—if you miss the window, shorten feeding time and prioritize shade.</li>
           <li>Never let the toddler hold an open cracker stack; one adult controls the bag.</li>
           <li>Return leg: train seats for six can split—pair older kids with adults before boarding.</li>
+          <li>
+            <strong>Ikoma:</strong> carry <strong>cash</strong> for cable car / kiosk lines; treat it as a <strong>viewing + one-ride</strong> stop, not a second theme park. If anyone is motion-sensitive, preview the steep funicular feel before boarding.
+          </li>
         </ul>
-        <h3>Optional — if time &amp; interest</h3>
+        <h3>Mt. Ikoma (views on the way home)</h3>
+        <p class="small">
+          The summit pocket is <strong>exposed in July</strong>—water, hats, and a hard “we leave for the down-car by ___” rule beat trying to empty the whole
+          <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Sanjo+Amusement+Park" target="_blank" rel="noopener noreferrer">amusement area</a>.
+        </p>
+        <h3>Optional — if time &amp; interest (Nara only)</h3>
         <ul>
           <li>
             <a href="https://www.google.com/maps/search/?api=1&query=Kasuga+Taisha+Nara" target="_blank" rel="noopener noreferrer">Kasuga Taisha</a> — lantern-lined paths through the forest (~<strong>45–75 min</strong> round trip from the park core).
@@ -3089,16 +3544,19 @@
         <h3>Plan ahead</h3>
         <ul>
           <li>
-            <strong>Tomorrow (July 6 — Kyoto):</strong> confirm <strong>teamLab Biovortex</strong> date + entry time on the official <a href="https://www.teamlab.art/e/kyoto" target="_blank" rel="noopener noreferrer">teamLab</a> site (see <strong>When to book reservations</strong>), decide <strong>Fushimi Inari</strong> vs <strong>Kiyomizu / Ninenzaka</strong> for the afternoon (you may not fit both), pack a light layer for museum AC + sun gear for outdoor Kyoto, and aim for an early hotel night after deer-day miles.
+            <strong>Tomorrow (July 6 — Kyoto):</strong> confirm <strong>teamLab Biovortex</strong> date + entry time on the official <a href="https://www.teamlab.art/e/kyoto" target="_blank" rel="noopener noreferrer">teamLab</a> site (see <strong>When to book reservations</strong>), decide <strong>Fushimi Inari</strong> vs <strong>Kiyomizu / Ninenzaka</strong> for the afternoon (you may not fit both), decide yes/no on optional <strong>Nishiki Market</strong> (cash-friendly snack walk between Biovortex and shrines), pack a light layer for museum AC + sun gear for outdoor Kyoto, and <strong>finish laundry</strong>. Then <strong>pre-pick July 7 Plan A–E</strong> so July 6’s “Pack for July 7” row matches reality (<strong>Plan C</strong> Arashiyama layers + optional Sagano tickets vs <strong>Plan A</strong> Solaniwa swim/onsen kit vs Hirakata sun kit for <strong>B / E</strong> vs <strong>Plan D</strong> MIRACLE + Umeda Sky QR screenshots). If you already know you want to skip another long Kyoto rail day, skim <strong>Plans A, B, D, or E</strong> first—but still lock <strong>one</strong> main plan before sleep.
+          </li>
+          <li>
+            Aim for an <strong>earlier hotel night</strong> when you can—especially if tonight included the <strong>Ikoma</strong> cable car plus a late <strong>CityWalk</strong> dinner—Kyoto tomorrow is a long train + walking day.
           </li>
         </ul>
       </details>
 
       <details class="travel-day day-title-text">
-        <summary><span class="sum-title">Monday — July 6: Kyoto teamLab Biovortex + classic highlights</span><span class="sum-sub">Day trip from Osaka: timed museum near Kyoto Station, then Fushimi Inari or Higashiyama—back to CityWalk for dinner.</span></summary>
+        <summary><span class="sum-title">Monday — July 6: Kyoto teamLab Biovortex + classic highlights</span><span class="sum-sub">Day trip from Osaka: timed museum near Kyoto Station, then Fushimi Inari or Higashiyama—optional Nishiki Market (covered food arcade)—back to CityWalk for dinner.</span></summary>
         <details class="day-hourly">
           <summary>Hour-by-hour timeline</summary>
-          <p class="small">JST. Anchor the day on your <strong>Biovortex entry slot</strong>—shift morning travel to hit it on time. Outdoor blocks are sun + steps; swap Fushimi for more Ninenzaka time if little legs are done.</p>
+          <p class="small">JST. Anchor the day on your <strong>Biovortex entry slot</strong>—shift morning travel to hit it on time. <strong>Optional:</strong> slot <a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market" target="_blank" rel="noopener noreferrer">Nishiki Market</a> between Biovortex and your PM shrine block if you want a short, cash-friendly food walk (skip if legs are already tired). Outdoor blocks are sun + steps; swap Fushimi for more Ninenzaka time if little legs are done.</p>
           <table class="hour-table">
             <tbody>
               <tr>
@@ -3122,9 +3580,9 @@
                 <th scope="row">12:30pm–2:00pm</th>
                 <td>
                   <strong>Lunch</strong> —
-                  <a href="https://www.google.com/maps/search/?api=1&query=Kyoto+Station+ramen" target="_blank" rel="noopener noreferrer">Kyoto Station</a> / Isetan basement,
-                  <a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market+food" target="_blank" rel="noopener noreferrer">Nishiki Market</a> grazing (cash-friendly), or sit-down
-                  <a href="https://www.google.com/maps/search/?api=1&query=teishoku+Kyoto+Kawaramachi" target="_blank" rel="noopener noreferrer">teishoku</a> toward downtown.
+                  <a href="https://www.google.com/maps/search/?api=1&query=Kyoto+Station+ramen" target="_blank" rel="noopener noreferrer">Kyoto Station</a> / Isetan basement, sit-down
+                  <a href="https://www.google.com/maps/search/?api=1&query=teishoku+Kyoto+Kawaramachi" target="_blank" rel="noopener noreferrer">teishoku</a> toward downtown, <strong>or optional</strong>
+                  <a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market+food" target="_blank" rel="noopener noreferrer">Nishiki Market</a> grazing (covered arcade; carry <strong>cash</strong> for small vendors; ~<strong>30–60 min</strong> if you treat it as lunch + browsing).
                 </td>
               </tr>
               <tr>
@@ -3149,11 +3607,13 @@
               </tr>
               <tr>
                 <th scope="row">9:00pm–10:00pm</th>
-                <td><strong>Pack for Arashiyama (July 7)</strong> — water, hats; Sagano train tickets if booked.</td>
+                <td>
+                  <strong>Pack for July 7</strong> — depends on the plan you chose: Plan A → swimsuits / onsen bag per Solaniwa rules; Plan C → water, hats, cool layers + Sagano tickets if booked; Plans B/E with Hirakata → sun gear + portable charger; Plan D → light jacket for windy rooftop + phone power for <strong>MIRACLE WORLD</strong> QR tickets.
+                </td>
               </tr>
               <tr>
                 <th scope="row">10:00pm–6:00am</th>
-                <td><strong>Sleep</strong> — earlier night helps before July 7’s early bamboo start.</td>
+                <td><strong>Sleep</strong> — earlier night especially if July 7 is Plan C (early bamboo) or a big Hirakata day.</td>
               </tr>
             </tbody>
           </table>
@@ -3166,11 +3626,28 @@
               <li>
                 <a href="https://www.google.com/maps/search/?api=1&query=Kyoto+International+Manga+Museum" target="_blank" rel="noopener noreferrer">Kyoto International Manga Museum</a> — A/C pit stop if weather spikes (~<strong>45–90 min</strong>).
               </li>
-              <li>Trim Fushimi climb to first photogenic gate loop only; save legs for Arashiyama tomorrow.</li>
+              <li>Trim Fushimi climb to first photogenic gate loop only; save legs for <strong>July 7 Plan C</strong> (Arashiyama)—if July 7 is Hirakata / Solaniwa (Plan A) / Umeda + <strong>MIRACLE WORLD</strong> instead, you can spend a bit more on stairs today.</li>
             </ul>
           </div>
         </details>
         <div class="venue-inline">
+          <figure class="venue teamlab-biovortex">
+            <img
+              loading="lazy"
+              alt="teamLab immersive digital art—lamps, spheres, foam, and light vortex (mood board for Biovortex-style rooms)"
+              src="assets/venues/teamlab-biovortex-kyoto.png"
+              data-carousel-slides="1,2,3,4"
+            />
+            <figcaption>
+              <div class="name">
+                <a href="https://www.google.com/maps/search/?api=1&query=teamLab+Biovortex+Kyoto" target="_blank" rel="noopener noreferrer">teamLab Biovortex Kyoto</a>
+              </div>
+              <p class="desc">
+                Your <strong>July 6</strong> timed anchor near Kyoto Station—use the arrows to flip through four reference shots of teamLab-style immersive rooms (dark floors, dense light, mirrored depth). Actual Biovortex lineup follows
+                <a href="https://www.teamlab.art/e/kyoto" target="_blank" rel="noopener noreferrer">official venue pages</a>.
+              </p>
+            </figcaption>
+          </figure>
           <figure class="venue">
             <img loading="lazy" alt="Kiyomizu-dera" src="assets/venues/kiyomizu-dera.png" />
             <figcaption>
@@ -3199,12 +3676,17 @@
             ·
             <a href="https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Fushimi+Inari+Taisha" target="_blank" rel="noopener noreferrer">Station area → Fushimi Inari</a>
             ·
-            <a href="https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Kiyomizu-dera" target="_blank" rel="noopener noreferrer">Station area → Kiyomizu-dera</a>.
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Kiyomizu-dera" target="_blank" rel="noopener noreferrer">Station area → Kiyomizu-dera</a>
+            ·
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Nishiki+Market+Kyoto" target="_blank" rel="noopener noreferrer">Station area → Nishiki Market</a>.
           </div>
         </div>
         <h3>Proximity & timing</h3>
         <ul>
           <li><code>teamLab Biovortex Kyoto</code> is near <strong>Kyoto Station</strong> (south / Hachijō side)—short walk from the shinkansen / JR core after you navigate the exits.</li>
+          <li>
+            <strong>Optional — <a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market" target="_blank" rel="noopener noreferrer">Nishiki Market</a>:</strong> covered “Kyoto’s kitchen” arcade off <strong>Shijo</strong> / Teramachi—typically <strong>~15–25 min</strong> by train + walk from Kyoto Station (or a short taxi if strollers are cranky). Best as a <strong>between-Biovortex-and-shrine</strong> bite walk, not a third full sightseeing district.
+          </li>
           <li><code>Fushimi Inari</code> is a separate short train hop (typically <strong>~10–20 min</strong> from central Kyoto, then walk-in).</li>
           <li><code>Kiyomizu / Ninenzaka</code> is east of the station—often <strong>~25–40 min</strong> by bus or taxi from the station block; walking is doable but hilly.</li>
           <li>Whole Osaka ↔ Kyoto round trip plus sights: treat as <strong>~10–12+ hour</strong> outing with six people.</li>
@@ -3223,13 +3705,33 @@
             <a href="https://www.google.com/maps/search/?api=1&query=Ninenzaka" target="_blank" rel="noopener noreferrer">Ninenzaka</a> /
             <a href="https://www.google.com/maps/search/?api=1&query=Sannenzaka" target="_blank" rel="noopener noreferrer">Sannenzaka</a> — classic stroll; combined block often <strong>2–3 hours</strong> with photos and tea stops.
           </li>
+          <li>
+            <strong>Optional:</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market" target="_blank" rel="noopener noreferrer">Nishiki Market</a> (錦市場) — narrow covered food street; pickles, tamagoyaki, skewers, sweets, tea. Budget <strong>30–60 min</strong>; many stalls are <strong>cash</strong>; crowds spike midday—go early after Biovortex or skip if you’re shrine-sprinting.
+          </li>
         </ul>
         <h3>Food — Japan-first picks</h3>
         <p class="small">
-          Near the station, <strong>department-store basements</strong> and <strong>Ramen Street</strong>-style clusters are high-hit-rate for six seats. In Higashiyama, pick a sit-down
+          Near the station, <strong>department-store basements</strong> and <strong>Ramen Street</strong>-style clusters are high-hit-rate for six seats. Optional
+          <a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market" target="_blank" rel="noopener noreferrer">Nishiki Market</a> is walk-and-nibble (skewers, pickles, tamagoyaki)—great with kids if you keep it short and carry <strong>cash</strong>. In Higashiyama, pick a sit-down
           <a href="https://www.google.com/maps/search/?api=1&query=soba+Kiyomizu" target="_blank" rel="noopener noreferrer">soba</a> or
           <a href="https://www.google.com/maps/search/?api=1&query=yudofu+Higashiyama+Kyoto" target="_blank" rel="noopener noreferrer">yudōfu</a> over souvenir-candy-only “lunch.”
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kyoto+Ramen+Koji+Kyoto+Station" target="_blank" rel="noopener noreferrer">Kyoto Ramen Koji (inside Isetan / station)</a> — 8–9 famous shops in one floor; great when Biovortex ends exactly at hunger o’clock.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Musoshin+Kyoto+Station" target="_blank" rel="noopener noreferrer">Musoshin / tsukemen counters (Kyoto Station)</a> — thick dipping noodles if you want a shorter line than the top-name ramen stalls.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Omen+Ginkakuji+soba" target="_blank" rel="noopener noreferrer">Omen (Ginkaku-ji branch)</a> — cold udon sets when your PM block is Higashiyama (farther east—taxi or bus time).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Miki+Keiran+tamagoyaki+Nishiki+Market" target="_blank" rel="noopener noreferrer">Miki Keiran–style tamagoyaki stalls (Nishiki Market)</a> — sweet/savory egg rolls between Biovortex and trains—carry <strong>cash</strong>.
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>Biovortex: expect dark rooms, mirrored floors, and occasional water—check official rules for toddlers, strollers, and motion sensitivity before you buy six tickets (same mindset as <strong>teamLab Planets</strong> in Tokyo).</li>
@@ -3239,7 +3741,7 @@
         <h3>Optional — if time &amp; interest</h3>
         <ul>
           <li>
-            <a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market" target="_blank" rel="noopener noreferrer">Nishiki Market</a> — covered food arcade; great for pickles, skewers, and caffeine (~<strong>30–60 min</strong>).
+            <a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market" target="_blank" rel="noopener noreferrer">Nishiki Market</a> — if you didn’t already weave it into lunch or the <strong>Stretch if ahead</strong> slot, add a final <strong>30–45 min</strong> graze before trains back to Osaka; keep <strong>cash</strong> and expect tight aisles with a stroller.
           </li>
           <li>
             <a href="https://www.google.com/maps/search/?api=1&query=Gion+Kyoto" target="_blank" rel="noopener noreferrer">Gion</a> edge /
@@ -3249,16 +3751,211 @@
         <h3>Plan ahead</h3>
         <ul>
           <li>
-            <strong>Tomorrow (July 7 — Arashiyama + optional Monkey Park):</strong> confirm first train or taxi time from USJ area, pre-pack breakfast bars and water for the long leg, decide monkey hike <strong>yes/no</strong>, cool layers for bamboo + hill sun. If using the
-            <strong>Sagano Romantic Train</strong>, confirm seats were booked ahead per <strong>When to book reservations</strong>. If the <strong>July 8 KIX van/taxi</strong> is not booked yet, schedule it now.
+            <strong>Tomorrow (July 7 — choose a plan):</strong> lock <strong>A</strong> (Solaniwa + Tempozan harbor) vs <strong>B–E</strong> (Hirakata / Arashiyama Kyoto / Umeda Sky + MIRACLE WORLD / combo) before bed—if July 6 already felt like enough Kyoto, skip <strong>Plan C</strong> and bias to <strong>A, B, D, or E</strong> for shorter rides. For <strong>Plan C</strong> (Arashiyama): first-train or taxi timing, breakfast bars + water, monkey hike <strong>yes/no</strong>, bamboo layers. If using the <strong>Sagano Romantic Train</strong> (Plan C), confirm seats per <strong>When to book reservations</strong>. For <strong>Plan A</strong>: pack swim / onsen gear and skim Solaniwa house rules. For <strong>Plan D</strong>: screenshot your <strong>MIRACLE WORLD</strong> timed slot + <strong>Umeda Sky</strong> ticket windows so they do not collide. Sun cream + hats for Hirakata (<strong>B / E</strong>). If the <strong>July 8 KIX van/taxi</strong> is not booked yet, schedule it now.
           </li>
         </ul>
       </details>
 
       <details>
-        <summary><span class="sum-title">Tuesday — July 7: Kyoto bamboo forest + Monkey Park</span><span class="sum-sub">Early bamboo stroll and optional Monkey Park—west Kyoto only (Biovortex was July 6).</span></summary>
+        <summary><span class="sum-title">Tuesday — July 7: Choose your adventure (Kyoto or Osaka)</span><span class="sum-sub">Plan A: Solaniwa Onsen + Tempozan harbor (Osaka bay). Plan B–E: Hirakata Park, Arashiyama bamboo + optional Monkey Park (Kyoto), Umeda Sky + Namba <strong>MIRACLE WORLD</strong>, or a combo—skip Plan C if you do not want another long Kyoto haul after July 6.</span></summary>
+        <p class="small">
+          Pick <strong>one main plan</strong> before you sleep on July 6—trying to stack multiple arcs will feel like a sixth theme-park day. <strong>Plan A</strong> lists first as the gentle default after a big Kyoto day: same bay district as July 3, but soak-focused rather than re-running Kaiyukan. <strong>Plan C</strong> is the full Arashiyama + optional Monkey leg if you still want west Kyoto bamboo. <strong>MIRACLE WORLD</strong> stays in <strong>Plan D</strong> with Umeda Sky—Namba to Umeda is a quick subway hop, tighter than pairing the Sky Building with Tempozan or Hirakata.
+        </p>
         <details class="day-hourly">
-          <summary>Hour-by-hour timeline</summary>
+          <summary>Plan A — Solaniwa Onsen + Tempozan harbor (recovery day)</summary>
+          <p class="small">
+            <strong>What:</strong> A long, low-stress block at Osaka’s large onsen / spa complex in
+            <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Harbor+Village+Osaka" target="_blank" rel="noopener noreferrer">Tempozan Harbor Village</a>—baths, rest zones, optional harbor marketplace stroll—instead of another sightseeing sprint.
+          </p>
+          <p class="small">
+            <strong>Why:</strong> After <strong>July 6 Kyoto</strong> miles, this keeps everyone close to the hotel (<strong>~25–40 min</strong> each way), mostly indoors with AC, and reuses the bay area you already touched on <strong>July 3</strong> without repeating Kaiyukan—ideal when the group needs recovery before the <strong>July 8</strong> early flight.
+          </p>
+          <p class="small">
+            JST. Big onsen / spa complex at
+            <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Harbor+Village+Osaka" target="_blank" rel="noopener noreferrer">Tempozan Harbor Village</a>—same bay district as July 3’s Kaiyukan day, but this plan is <strong>soak + slow food</strong>, not re-running the aquarium. Commute from the hotel is usually <strong>~25–40 min</strong>.
+          </p>
+          <table class="hour-table">
+            <tbody>
+              <tr>
+                <th scope="row">8:00am–9:30am</th>
+                <td><strong>Slow wake + breakfast</strong> — hotel; pack swim / onsen bag per venue rules.</td>
+              </tr>
+              <tr>
+                <th scope="row">9:30am–10:15am</th>
+                <td>
+                  <strong>Travel</strong> — hotel →
+                  <a href="https://www.google.com/maps/search/?api=1&query=Solaniwa+Onsen+Tempozan" target="_blank" rel="noopener noreferrer">Solaniwa Onsen</a> (Tempozan).
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">10:15am–3:30pm</th>
+                <td>
+                  <strong>Solaniwa Onsen</strong> — rotate adults for kid watch if zones split by age; hydrate constantly. Use indoor rest areas between baths—July humidity is no joke.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3:30pm–5:30pm</th>
+                <td>
+                  <strong>Harbor stroll (optional)</strong> —
+                  <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Marketplace+Osaka" target="_blank" rel="noopener noreferrer">Tempozan Marketplace</a> snacks / iced drinks + photo walk; skip if everyone is pruned and ready for AC.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">5:30pm–6:15pm</th>
+                <td><strong>Travel</strong> — Tempozan → hotel.</td>
+              </tr>
+              <tr>
+                <th scope="row">6:15pm–8:30pm</th>
+                <td>
+                  <strong>Dinner</strong> —
+                  <a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">CityWalk</a> or repeat a July 3 favorite if kids want a “known quantity” meal.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">8:30pm–10:00pm</th>
+                <td><strong>KIX prep</strong> — bags, documents, early sleep.</td>
+              </tr>
+              <tr>
+                <th scope="row">10:00pm–3:30am</th>
+                <td><strong>Sleep</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Route links (Plan A)</h3>
+          <ul>
+            <li>
+              <a href="https://www.google.com/maps/dir/?api=1&origin=The+Park+Front+Hotel+Universal+Studios+Japan&destination=Solaniwa+Onsen+Tempozan" target="_blank" rel="noopener noreferrer">Hotel → Solaniwa Onsen</a>
+              ·
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Solaniwa+Onsen+Tempozan&destination=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Return</a>
+            </li>
+          </ul>
+          <h3>Plan A — tips</h3>
+          <ul>
+            <li>Read tattoo + photography rules on the official site before you promise the teens “full spa glam.”</li>
+            <li>Treat this as recovery: if anyone is catching a cold, favor rest over “maximize every pool.”</li>
+          </ul>
+          <h3>Plan A — highly rated food (Tempozan + CityWalk)</h3>
+          <ul class="small food-rated">
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Naniwa+Kuishinbo+Yokocho+Tempozan" target="_blank" rel="noopener noreferrer">Naniwa Kuishinbo Yokocho (Tempozan Marketplace)</a> — okonomiyaki, kushikatsu, and takoyaki stalls in one food hall after soaking.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Kaiten+zushi+Tempozan+Marketplace" target="_blank" rel="noopener noreferrer">Kaiten-zushi (Tempozan)</a> — belt sushi when kids want protein before the hotel shuttle.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Red+Lobster+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Red Lobster / seafood grills (CityWalk)</a> — predictable shellfish platters if the group wants a sit-down “vacation dinner.”
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Tsuruhashi+Fugetsu+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Tsuruhashi Fugetsu (CityWalk)</a> — okonomiyaki chain with English-friendly photo menus near the hotel.
+            </li>
+          </ul>
+        </details>
+
+        <details class="day-hourly">
+          <summary>Plan B — Hirakata Park (amusement park day)</summary>
+          <p class="small">
+            <strong>What:</strong> A classic regional amusement park day—family rides, shows, snack kiosks, and line culture at
+            <a href="https://www.google.com/maps/search/?api=1&query=Hirakata+Park" target="_blank" rel="noopener noreferrer">Hirakata Park</a> in Osaka prefecture.
+          </p>
+          <p class="small">
+            <strong>Why:</strong> Choose this when kids still want “park energy” but adults do not want another <strong>1.5–2 h</strong> haul to Kyoto—typically <strong>~45–70 min</strong> from the USJ hotel zone, so more riding and less transfer fatigue than <strong>Plan C</strong>.
+          </p>
+          <p class="small">
+            JST. Classic rides + shows in Osaka prefecture—typically <strong>~45–70 min</strong> from the USJ hotel zone vs <strong>~1.5–2 h</strong> to Arashiyama. Good “kid energy” day without another Kyoto transfer.
+          </p>
+          <table class="hour-table">
+            <tbody>
+              <tr>
+                <th scope="row">7:30am–8:30am</th>
+                <td><strong>Wake + breakfast</strong> — hotel / conbini; sunscreen in every bag.</td>
+              </tr>
+              <tr>
+                <th scope="row">8:30am–9:45am</th>
+                <td>
+                  <strong>Travel</strong> — hotel →
+                  <a href="https://www.google.com/maps/search/?api=1&query=Hirakata+Park" target="_blank" rel="noopener noreferrer">Hirakata Park</a> (JR / Keihan combinations depending on live maps; budget <strong>~45–70 min</strong> door-to-door).
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">10:00am–5:00pm</th>
+                <td>
+                  <strong>Hirakata Park</strong> — rope in <strong>shade breaks</strong> and a fixed lunch window so nobody melts. Mix kiddie flats with a couple of family thrillers; check show times at the gate. Carry <strong>cash</strong> for lockers, games, and snack kiosks.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">5:00pm–6:30pm</th>
+                <td><strong>Travel back</strong> — park → hotel (~<strong>45–70 min</strong>).</td>
+              </tr>
+              <tr>
+                <th scope="row">6:30pm–8:30pm</th>
+                <td>
+                  <strong>Dinner</strong> —
+                  <a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">CityWalk</a> / hotel—easy after a loud park day.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">8:30pm–10:00pm</th>
+                <td><strong>KIX prep</strong> — lay out July 8 outfits; confirm van/taxi.</td>
+              </tr>
+              <tr>
+                <th scope="row">10:00pm–3:30am</th>
+                <td><strong>Sleep</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="schedule-stretch">
+            <h4>Stretch if ahead</h4>
+            <ul>
+              <li>Second pass on favorite kiddie rides in the last hour if lines shrink.</li>
+              <li>
+                <strong>Namba detour:</strong> if you leave Hirakata early and still have kid energy, route home via
+                <a href="https://www.google.com/maps/search/?api=1&query=MIRACLE+WORLD+Osaka+Namba" target="_blank" rel="noopener noreferrer">MIRACLE WORLD</a> (book a timed slot)—central Namba is the closest major July-7 alt anchor to this park compared with Tempozan or Umeda-only loops, but it still adds ~<strong>90–150 min</strong> all-in—skip if tomorrow is the 4:00am KIX wake.
+              </li>
+            </ul>
+          </div>
+          <h3>Route links (Plan B)</h3>
+          <ul>
+            <li>
+              <a href="https://www.google.com/maps/dir/?api=1&origin=The+Park+Front+Hotel+Universal+Studios+Japan&destination=Hirakata+Park" target="_blank" rel="noopener noreferrer">Hotel → Hirakata Park</a>
+              ·
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Hirakata+Park&destination=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Return</a>
+              ·
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Hirakata+Park&destination=MIRACLE+WORLD+Osaka+Namba" target="_blank" rel="noopener noreferrer">Hirakata → MIRACLE WORLD (optional)</a>
+            </li>
+          </ul>
+          <h3>Plan B — tips</h3>
+          <ul>
+            <li>Weekday vs weekend crowd levels matter more than “arriving at rope drop” unless you’re chasing one headline coaster.</li>
+            <li>Pair adults on queue duty: one wrangles snacks/shade while the other holds a ride line.</li>
+          </ul>
+          <h3>Plan B — highly rated food (Hirakata + CityWalk)</h3>
+          <ul class="small food-rated">
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=CoCo+Ichibanya+Hirakata" target="_blank" rel="noopener noreferrer">CoCo Ichibanya (Hirakata station area)</a> — customize-spice curry before/after the park when kids want something fast.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=ramen+Hirakata+Station" target="_blank" rel="noopener noreferrer">Ramen row (Hirakata / Keihan corridor)</a> — shop-and-compare on Maps for the shortest queue near your route home.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Torikizoku+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">Torikizoku (CityWalk)</a> — cheap yakitori + beer for adults after a loud park day (confirm smoke-free seating if needed).
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=MOS+Burger+Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">MOS Burger / Japanese burger chains (CityWalk)</a> — teriyaki burgers and rice buns when younger kids veto skewers.
+            </li>
+          </ul>
+        </details>
+
+        <details class="day-hourly">
+          <summary>Plan C — Arashiyama bamboo + optional Monkey Park (Kyoto)</summary>
+          <p class="small">
+            <strong>What:</strong> A west-Kyoto nature day: early
+            <a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">Arashiyama bamboo</a>, optional
+            <a href="https://www.google.com/maps/search/?api=1&query=Iwatayama+Monkey+Park" target="_blank" rel="noopener noreferrer">Monkey Park</a> hike, river time, optional
+            <a href="https://www.google.com/maps/search/?api=1&query=Sagano+Romantic+Train+Torokko+Saga+Station" target="_blank" rel="noopener noreferrer">Sagano Romantic Train</a>—the postcard Kyoto experience outside the July 6 station / Higashiyama cluster.
+          </p>
+          <p class="small">
+            <strong>Why:</strong> Pick this when bamboo photos, river breeze, and “we did Kyoto properly” still matter more than saving legs—accept the long Osaka ↔ Arashiyama transfers in exchange for scenery you cannot replicate in Osaka city.
+          </p>
           <p class="small">JST. Long Osaka → Arashiyama leg—<strong>bamboo first</strong> beats tour-bus crush. Keep this day west-side; central Kyoto + Biovortex already ran on <strong>July 6</strong>.</p>
           <table class="hour-table">
             <tbody>
@@ -3322,7 +4019,6 @@
               <li>Drop Monkey Park for toddler nap on benches + earlier Osaka return.</li>
             </ul>
           </div>
-        </details>
         <div class="venue-inline">
           <figure class="venue">
             <img loading="lazy" alt="Arashiyama Bamboo Grove" src="assets/venues/arashiyama-bamboo-grove.png" />
@@ -3391,6 +4087,21 @@
             <a href="https://www.google.com/maps/search/?api=1&query=obanzai+Kyoto+Arashiyama" target="_blank" rel="noopener noreferrer">Obanzai / teishoku</a>
           </li>
         </ul>
+        <h3>Plan C — highly rated food (Arashiyama + hotel zone)</h3>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Saga+Tofu+Arashiyama+yudofu" target="_blank" rel="noopener noreferrer">Saga-district yudōfu (Arashiyama)</a> — tofu kaiseki–style lunches; reserve same morning if possible.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Yoshimura+Arashiyama+soba" target="_blank" rel="noopener noreferrer">Yoshimura (Arashiyama)</a> — buckwheat soba with river views when you want noodles over tofu.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Yoshiya+yudofu" target="_blank" rel="noopener noreferrer">Yoshiya / other legacy yudōfu houses</a> — compare Maps reviews for same-day availability near the bamboo exit.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Menya+Inoichi+Kyoto" target="_blank" rel="noopener noreferrer">Menya Inoichi (Kyoto Ichijo)</a> — acclaimed chicken shoyu ramen if you route back via JR and want dinner before Osaka (check hours vs your return).
+          </li>
+        </ul>
         <div class="tips">
           <h4>Family of 6 tips</h4>
           <ul>
@@ -3423,6 +4134,193 @@
             <a href="https://www.google.com/maps/search/?api=1&query=Kimono+Forest+Arashiyama" target="_blank" rel="noopener noreferrer">Kimono Forest</a> (Randen Arashiyama Station)—quick photo column walk if you use that line (~<strong>15–25 min</strong>).
           </li>
         </ul>
+        </details>
+
+        <details class="day-hourly">
+          <summary>Plan D — MIRACLE WORLD (Namba) + Umeda Sky Building</summary>
+          <p class="small">
+            <strong>What:</strong> A two-part Osaka city day—timed entry at
+            <a href="https://www.google.com/maps/search/?api=1&query=MIRACLE+WORLD+Osaka+Namba" target="_blank" rel="noopener noreferrer">MIRACLE WORLD</a> (Namba immersive digital walkthrough), then
+            <a href="https://www.google.com/maps/search/?api=1&query=Umeda+Sky+Building" target="_blank" rel="noopener noreferrer">Umeda Sky Building</a>’s rooftop observatory plus north-Osaka mall dining.
+          </p>
+          <p class="small">
+            <strong>Why:</strong> You get two high-impact “wow” moments—indoor spectacle + open-air skyline—with a short subway link between Namba and Umeda, so less zig-zagging than pairing the Sky Building with Tempozan or Hirakata; strong when you want memorable Osaka without going back to Kyoto.
+          </p>
+          <p class="small">
+            JST. <strong>MIRACLE WORLD</strong> is in
+            <a href="https://www.google.com/maps/search/?api=1&query=Namba+Station+Osaka" target="_blank" rel="noopener noreferrer">Namba</a> (Chuo-ku); <strong>Umeda Sky Building</strong> is a short <strong>Midosuji Line</strong> hop north—this is the tightest “digital museum + rooftop” pairing among July 7’s Osaka alts (much less backtracking than bay or Hirakata). Book both venues’ <strong>timed windows</strong> so they do not collide.
+          </p>
+          <table class="hour-table">
+            <tbody>
+              <tr>
+                <th scope="row">8:30am–10:00am</th>
+                <td><strong>Wake + breakfast</strong> — hotel; charge phones; screenshot MIRACLE WORLD + Sky entry QR codes.</td>
+              </tr>
+              <tr>
+                <th scope="row">10:00am–11:00am</th>
+                <td>
+                  <strong>Travel</strong> — hotel → Namba / Sennichimae pocket (often <strong>~35–55 min</strong>; follow live maps).
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">11:00am–12:45pm</th>
+                <td>
+                  <strong>MIRACLE WORLD</strong> — immersive digital walkthrough (~<strong>40–60 min</strong> inside + ticketing buffer). Official:
+                  <a href="https://miracle-world.co.jp/" target="_blank" rel="noopener noreferrer">miracle-world.co.jp</a>. If lines run long, steal time from the next row—not from the Sky slot.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">12:45pm–2:30pm</th>
+                <td>
+                  <strong>Subway</strong> — Namba →
+                  <a href="https://www.google.com/maps/search/?api=1&query=Umeda+Station+Osaka" target="_blank" rel="noopener noreferrer">Umeda</a> (~<strong>12–18 min</strong> train + walks).
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2:30pm–4:15pm</th>
+                <td>
+                  <strong>Umeda lunch + wander</strong> —
+                  <a href="https://www.google.com/maps/search/?api=1&query=Grand+Front+Osaka" target="_blank" rel="noopener noreferrer">Grand Front</a> /
+                  <a href="https://www.google.com/maps/search/?api=1&query=Lucua+Osaka" target="_blank" rel="noopener noreferrer">LUCUA</a> food floors + light shopping / Pokémon Center if you want an indoor anchor.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4:15pm–4:30pm</th>
+                <td><strong>Buffer</strong> — walk toward the Sky Building early; elevators can queue before sunset.</td>
+              </tr>
+              <tr>
+                <th scope="row">4:30pm–7:00pm</th>
+                <td>
+                  <strong>Umeda Sky Building</strong> — timed entry if booked;
+                  <a href="https://www.google.com/maps/search/?api=1&query=Umeda+Sky+Building+Floating+Garden" target="_blank" rel="noopener noreferrer">Floating Garden Observatory</a> loop + escalator tube photos. Windproof layer for the roof—it can feel gusty even when the city is muggy below.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">7:00pm–8:30pm</th>
+                <td>
+                  <strong>Dinner</strong> — Umeda basement food halls or a sit-down
+                  <a href="https://www.google.com/maps/search/?api=1&query=okonomiyaki+Umeda" target="_blank" rel="noopener noreferrer">okonomiyaki</a> / yakiniku block—then train back toward the hotel.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">8:30pm–10:00pm</th>
+                <td><strong>KIX prep</strong> — documents + laundry finish.</td>
+              </tr>
+              <tr>
+                <th scope="row">10:00pm–3:30am</th>
+                <td><strong>Sleep</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Route links (Plan D)</h3>
+          <ul>
+            <li>
+              <a href="https://www.google.com/maps/dir/?api=1&origin=The+Park+Front+Hotel+Universal+Studios+Japan&destination=MIRACLE+WORLD+Osaka+Namba" target="_blank" rel="noopener noreferrer">Hotel → MIRACLE WORLD</a>
+              ·
+              <a href="https://www.google.com/maps/dir/?api=1&origin=MIRACLE+WORLD+Osaka+Namba&destination=Umeda+Sky+Building" target="_blank" rel="noopener noreferrer">MIRACLE WORLD → Umeda Sky Building</a>
+              ·
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=The+Park+Front+Hotel+Universal+Studios+Japan" target="_blank" rel="noopener noreferrer">Sky Building → hotel</a>
+            </li>
+          </ul>
+          <h3>Plan D — tips</h3>
+          <ul>
+            <li>Strollers + station crowds: assign one adult as “front shield” through Namba and Umeda pinch points.</li>
+            <li>If rain kills the roof, extend MIRACLE WORLD pacing or add covered Namba/Dotonbori adjacent stroll—still very “Osaka.”</li>
+            <li>Dark rooms + sound: sensitive toddlers may want noise-canceling headphones; check the venue’s age guidance before you promise “everyone walks the full loop.”</li>
+          </ul>
+          <h3>Plan D — highly rated food (Namba + Umeda)</h3>
+          <ul class="small food-rated">
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Harukoma+Sushi+Dotonbori" target="_blank" rel="noopener noreferrer">Harukoma (Dotonbori)</a> — counter sushi a short walk from MIRACLE WORLD’s Namba pocket.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Kiji+Umeda+okonomiyaki" target="_blank" rel="noopener noreferrer">Kiji (Umeda Sky Building basement)</a> — famous Hiroshima-style okonomiyaki under the towers.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Grand+Front+Osaka+restaurants" target="_blank" rel="noopener noreferrer">Grand Front Osaka food floor</a> — high-hit-rate mall dining before the Sky Building slot.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=wagyu+shabu+Grand+Front+Osaka" target="_blank" rel="noopener noreferrer">Wagyu shabu / sukiyaki (Grand Front / Lucua)</a> — splurge beef sets when you want one memorable Umeda dinner (reserve if possible).
+            </li>
+          </ul>
+        </details>
+
+        <details class="day-hourly">
+          <summary>Plan E — Combo: Hirakata Park + evening soak, skyline, or MIRACLE WORLD</summary>
+          <p class="small">
+            <strong>What:</strong> A <strong>split day</strong>—morning and early afternoon at
+            <a href="https://www.google.com/maps/search/?api=1&query=Hirakata+Park" target="_blank" rel="noopener noreferrer">Hirakata Park</a>, then <strong>one</strong> evening anchor: <strong>E1</strong> Solaniwa soak,
+            <strong>E2</strong> Umeda Sky, or <strong>E3</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=MIRACLE+WORLD+Osaka+Namba" target="_blank" rel="noopener noreferrer">MIRACLE WORLD</a>—before returning toward the hotel.
+          </p>
+          <p class="small">
+            <strong>Why:</strong> Use this when the kids need coaster time but you still want a grown-up “finale” (onsen, skyline, or digital art) without a full Kyoto leg—same-day variety with a single hard choice at night so nobody tries to stack all three evening options.
+          </p>
+          <p class="small">
+            JST. Lock <strong>one</strong> evening track before you leave Hirakata—stacking <strong>E2 + E3 + E1</strong> the same night is usually overload. Use <strong>Plans A / B / D</strong> as the deep-dive references for Solaniwa, Hirakata rides, and MIRACLE + Sky timing.
+          </p>
+          <table class="hour-table">
+            <tbody>
+              <tr>
+                <th scope="row">7:30am–9:30am</th>
+                <td><strong>Wake + travel</strong> — hotel → Hirakata Park (same morning block as Plan B).</td>
+              </tr>
+              <tr>
+                <th scope="row">9:30am–3:30pm</th>
+                <td><strong>Hirakata Park (core hits)</strong> — prioritize rides + lunch inside the park; bail by mid-afternoon if heat spikes.</td>
+              </tr>
+              <tr>
+                <th scope="row">3:30pm–4:30pm</th>
+                <td><strong>Travel</strong> — Hirakata → Tempozan <em>or</em> Umeda <em>or</em> Namba (pick E1 / E2 / E3 the night before).</td>
+              </tr>
+              <tr>
+                <th scope="row">4:30pm–7:30pm</th>
+                <td>
+                  <strong>E1 Solaniwa</strong> shorter soak block (~<strong>2–3 h</strong> effective water time) <em>or</em> <strong>E2 Umeda Sky</strong> observatory + early dinner loop <em>or</em> <strong>E3 MIRACLE WORLD</strong> timed slot + quick Namba dinner—see Plans A / D for soak/sky links; book MIRACLE WORLD like Plan D.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">7:30pm–9:30pm</th>
+                <td><strong>Return + easy dinner</strong> — whichever zone you end in, favor direct JR / subway legs back toward Universal City.</td>
+              </tr>
+              <tr>
+                <th scope="row">9:30pm–3:30am</th>
+                <td><strong>Sleep + KIX prep</strong> — lighter packing pass since the day was split.</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Plan E — cut if behind</h3>
+          <ul>
+            <li>Drop the evening half entirely—Plan B alone is still a full win.</li>
+            <li>Swap E1 / E2 / E3 for weather + legs (rain → lean E1 or E3; clear breeze → lean E2).</li>
+          </ul>
+          <h3>Plan E — highly rated food (by evening track)</h3>
+          <ul class="small food-rated">
+            <li>
+              <strong>E1 (Solaniwa / Tempozan):</strong>
+              <a href="https://www.google.com/maps/search/?api=1&query=Naniwa+Kuishinbo+Yokocho+Tempozan" target="_blank" rel="noopener noreferrer">Naniwa Kuishinbo Yokocho</a>,
+              <a href="https://www.google.com/maps/search/?api=1&query=kaiten+zushi+Tempozan+Marketplace" target="_blank" rel="noopener noreferrer">kaiten-zushi</a>, or the same <a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Osaka" target="_blank" rel="noopener noreferrer">CityWalk</a> picks as Plan A after soaking.
+            </li>
+            <li>
+              <strong>E2 (Umeda Sky):</strong>
+              <a href="https://www.google.com/maps/search/?api=1&query=Kiji+Umeda+okonomiyaki" target="_blank" rel="noopener noreferrer">Kiji okonomiyaki</a>,
+              <a href="https://www.google.com/maps/search/?api=1&query=Lucua+Osaka+food" target="_blank" rel="noopener noreferrer">LUCUA / Grand Front food floors</a>, or
+              <a href="https://www.google.com/maps/search/?api=1&query=ramen+Umeda+Osaka" target="_blank" rel="noopener noreferrer">Umeda ramen alleys</a>.
+            </li>
+            <li>
+              <strong>E3 (MIRACLE WORLD / Namba):</strong>
+              <a href="https://www.google.com/maps/search/?api=1&query=Harukoma+Sushi+Dotonbori" target="_blank" rel="noopener noreferrer">Harukoma sushi</a>,
+              <a href="https://www.google.com/maps/search/?api=1&query=Mizuno+Okonomiyaki+Dotonbori" target="_blank" rel="noopener noreferrer">Mizuno okonomiyaki</a>, or
+              <a href="https://www.google.com/maps/search/?api=1&query=Sushiro+Namba" target="_blank" rel="noopener noreferrer">Sushiro (Namba)</a> for a fast kaiten reset.
+            </li>
+            <li>
+              <strong>Hirakata lunch (all E tracks):</strong>
+              <a href="https://www.google.com/maps/search/?api=1&query=CoCo+Ichibanya+Hirakata" target="_blank" rel="noopener noreferrer">CoCo Ichibanya</a> or
+              <a href="https://www.google.com/maps/search/?api=1&query=udon+Hirakata+Park" target="_blank" rel="noopener noreferrer">udon near Hirakata Park</a> before you bounce to the evening city.
+            </li>
+          </ul>
+        </details>
+
         <h3>Plan ahead</h3>
         <ul>
           <li>
@@ -3559,6 +4457,21 @@
           <a href="https://www.google.com/maps/search/?api=1&query=ramen+alley+Narita+Airport+Terminal+1" target="_blank" rel="noopener noreferrer">ramen/soba alleys</a> and
           <a href="https://www.google.com/maps/search/?api=1&query=depachika+Narita+Airport" target="_blank" rel="noopener noreferrer">depachika-style</a> takeout rather than defaulting to the most American brand you recognize; it’s your last easy hit of Japan-format meals before the Pacific crossing.
         </p>
+        <h4 class="food-rated">Highly rated near today</h4>
+        <ul class="small food-rated">
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Soup+Stock+Tokyo+KIX" target="_blank" rel="noopener noreferrer">Soup Stock Tokyo / grab-and-go soup (KIX)</a> — gentle on stomachs before a morning domestic hop (shop hours vary—check airside maps).
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=TsuruTonTan+Narita+Airport" target="_blank" rel="noopener noreferrer">TsuruTonTan (Narita T1 / airside)</a> — upscale udon bowls worth the layover splurge if immigration timing is smooth.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=FaSoLa+Dining+Narita" target="_blank" rel="noopener noreferrer">FaSoLa dining zone (Narita)</a> — cluster of Japanese chains + sushi within the terminal complex.
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Richmond+Airport+Vancouver+restaurants" target="_blank" rel="noopener noreferrer">Richmond night-market corridor (near YVR)</a> — congee / HK barbecue if you day-trip out of YVR on the long layover (only with energy + time buffer).
+          </li>
+        </ul>
         <h3>Today — extra tips</h3>
         <ul>
           <li>4am routine: lay out clothes and documents the night before; one adult owns “everyone out the door,” one owns bags and taxi check.</li>
@@ -3592,13 +4505,13 @@
         <h2>Trip overview map</h2>
         <p class="small">
           Numbered pins follow this itinerary in <strong>rough chronological order</strong> (Tokyo → Shinkansen → Kansai). After the Osaka hotel / CityWalk pins, the Kansai leg matches your dated plan:
-          <strong>July 1–2</strong> USJ (one pin), <strong>July 3</strong> Kaiyukan / Tempozan bay day, <strong>July 4</strong> castle → bay wheel → Dotonbori, <strong>July 5</strong> Nara, <strong>July 6</strong> teamLab Biovortex Kyoto, <strong>July 7</strong> Arashiyama (+ Monkey Park pin), then <strong>KIX</strong>.
+          <strong>July 1–2</strong> USJ (one pin), <strong>July 3</strong> Kaiyukan / Tempozan bay day, <strong>July 4</strong> Osaka Castle → Dotonbori, <strong>July 5</strong> Nara + optional <strong>Mt. Ikoma</strong> summit pin (Kintetsu return), <strong>July 6</strong> teamLab Biovortex Kyoto, <strong>July 7</strong> choose <strong>one</strong> of <strong>Plans A–E</strong> (the map keeps the <strong>Arashiyama</strong> west-Kyoto pin for <strong>Plan C</strong>; Hirakata, Solaniwa, Umeda Sky, and Namba <strong>MIRACLE WORLD</strong> are in the Osaka cluster—see the July 7 card), then <strong>KIX</strong>.
           The blue dashed line links stops for a big-picture sense of the journey only—it is <strong>not</strong> driving or rail routing.
         </p>
         <div id="trip-overview-map" class="trip-overview-map" role="img" aria-label="Map of Japan with numbered trip stops"></div>
         <p class="small" style="margin-top: 10px">
           <a
-            href="https://www.google.com/maps/dir/Narita+International+Airport,+Japan/Grand+Nikko+Tokyo+Bay+Maihama,+Japan/Tokyo+Disneyland,+Japan/Tokyo+DisneySea,+Japan/Senso-ji,+Tokyo/Tokyo+Skytree,+Japan/teamLab+Planets+TOKYO,+Japan/DiverCity+Tokyo+Plaza,+Japan/Pokemon+Center+Mega+Tokyo,+Ikebukuro/Sanrio+Puroland,+Japan/Tokyo+Station,+Japan/Shin-Osaka+Station,+Japan/The+Park+Front+Hotel+Universal+Studios+Japan,+Osaka/Universal+CityWalk+Osaka,+Japan/Universal+Studios+Japan,+Osaka/Osaka+Aquarium+Kaiyukan,+Japan/Osaka+Castle,+Japan/Tempozan+Ferris+Wheel,+Osaka/Dotonbori,+Osaka/Nara+Park,+Japan/Todai-ji,+Nara/teamLab+Biovortex+Kyoto,+Japan/Arashiyama+Bamboo+Grove,+Kyoto/Iwatayama+Monkey+Park,+Kyoto/Kansai+International+Airport,+Japan"
+            href="https://www.google.com/maps/dir/Narita+International+Airport,+Japan/Grand+Nikko+Tokyo+Bay+Maihama,+Japan/Tokyo+Disneyland,+Japan/Tokyo+DisneySea,+Japan/Senso-ji,+Tokyo/Tokyo+Skytree,+Japan/teamLab+Planets+TOKYO,+Japan/DiverCity+Tokyo+Plaza,+Japan/Pokemon+Center+Mega+Tokyo,+Ikebukuro/Sanrio+Puroland,+Japan/Tokyo+Station,+Japan/Shin-Osaka+Station,+Japan/The+Park+Front+Hotel+Universal+Studios+Japan,+Osaka/Universal+CityWalk+Osaka,+Japan/Universal+Studios+Japan,+Osaka/Osaka+Aquarium+Kaiyukan,+Japan/Tempozan+Ferris+Wheel,+Osaka/Osaka+Castle,+Japan/Dotonbori,+Osaka/Nara+Park,+Japan/Todai-ji,+Nara/Ikoma+Sanjo+Amusement+Park,+Japan/teamLab+Biovortex+Kyoto,+Japan/Arashiyama+Bamboo+Grove,+Kyoto/Iwatayama+Monkey+Park,+Kyoto/Kansai+International+Airport,+Japan"
             target="_blank"
             rel="noopener noreferrer"
             >Open the same stop list in Google Maps directions</a>
@@ -3654,16 +4567,32 @@
           <li><a href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera" target="_blank" rel="noopener noreferrer">Kiyomizu-dera</a></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Sannenzaka" target="_blank" rel="noopener noreferrer">Sannenzaka</a></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Ninenzaka" target="_blank" rel="noopener noreferrer">Ninenzaka</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market" target="_blank" rel="noopener noreferrer">Nishiki Market (Kyoto)</a></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha" target="_blank" rel="noopener noreferrer">Fushimi Inari Taisha</a></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Nara+Park" target="_blank" rel="noopener noreferrer">Nara Park</a></li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Cable+Car+Toriimae" target="_blank" rel="noopener noreferrer">Ikoma Cable Car (Tōriimae)</a> ·
+            <a href="https://www.google.com/maps/search/?api=1&query=Ikoma+Sanjo+Amusement+Park" target="_blank" rel="noopener noreferrer">Ikoma Sanjo Amusement Park</a> (<strong>July 5</strong> optional return)
+          </li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Todai-ji" target="_blank" rel="noopener noreferrer">Todai-ji</a></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank" rel="noopener noreferrer">Osaka Castle</a></li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Minoh+Falls+Minoo+Osaka" target="_blank" rel="noopener noreferrer">Minoo Park / Minoh Falls</a> (<strong>optional July 4</strong> half-day from Osaka)
+          </li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" rel="noopener noreferrer">Dotonbori</a></li>
           <li>
             <a href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">Osaka Aquarium Kaiyukan</a> (<strong>July 3</strong> on this itinerary)
           </li>
-          <li><a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan Ferris Wheel</a></li>
-          <li><a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">Arashiyama Bamboo Grove</a></li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tempozan+Ferris+Wheel" target="_blank" rel="noopener noreferrer">Tempozan Ferris Wheel</a> (<strong>July 3</strong> on this itinerary)
+          </li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank" rel="noopener noreferrer">Arashiyama Bamboo Grove</a> (<strong>July 7 Plan C</strong>)</li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hirakata+Park" target="_blank" rel="noopener noreferrer">Hirakata Park</a> (<strong>July 7 Plan B / E</strong>) ·
+            <a href="https://www.google.com/maps/search/?api=1&query=Solaniwa+Onsen+Tempozan" target="_blank" rel="noopener noreferrer">Solaniwa Onsen</a> (<strong>July 7 Plan A / E1</strong>) ·
+            <a href="https://www.google.com/maps/search/?api=1&query=Umeda+Sky+Building" target="_blank" rel="noopener noreferrer">Umeda Sky Building</a> (<strong>July 7 Plan D / E2</strong>) ·
+            <a href="https://www.google.com/maps/search/?api=1&query=MIRACLE+WORLD+Osaka+Namba" target="_blank" rel="noopener noreferrer">MIRACLE WORLD Osaka</a> (<strong>July 7 Plan D</strong> primary; <strong>E3</strong> / optional Plan B)
+          </li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Sagano+Romantic+Train+Torokko+Saga+Station" target="_blank" rel="noopener noreferrer">Sagano Romantic Train (Torokko Saga)</a></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Iwatayama+Monkey+Park" target="_blank" rel="noopener noreferrer">Iwatayama Monkey Park</a></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=teamLab+Biovortex+Kyoto" target="_blank" rel="noopener noreferrer">teamLab Biovortex Kyoto</a></li>
@@ -3697,11 +4626,12 @@
           [34.6654, 135.4351, "Universal CityWalk Osaka"],
           [34.6648, 135.4301, "Universal Studios Japan"],
           [34.6544, 135.4292, "Osaka Aquarium Kaiyukan"],
-          [34.6873, 135.5262, "Osaka Castle"],
           [34.6563, 135.4329, "Tempozan Ferris Wheel"],
+          [34.6873, 135.5262, "Osaka Castle"],
           [34.6687, 135.5023, "Dotonbori"],
           [34.6851, 135.843, "Nara Park"],
           [34.6889, 135.8398, "Todai-ji"],
+          [34.6764, 135.6771, "Mt. Ikoma (Sanjo amusement area)"],
           [34.9835, 135.7651, "teamLab Biovortex Kyoto"],
           [35.0094, 135.672, "Arashiyama Bamboo Grove"],
           [35.0092, 135.6777, "Iwatayama Monkey Park"],

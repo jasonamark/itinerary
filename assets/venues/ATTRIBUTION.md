@@ -18,7 +18,8 @@ These `.png` files are derived from openly licensed photos from Wikimedia Common
 - **`kirby-cafe-5.png`**: Derived from [File:Kirby cafe - 52929755406.jpg](https://commons.wikimedia.org/wiki/File:Kirby_cafe_-_52929755406.jpg)
 - **`tokyo-disneyland.png`**: Derived from [File:Tokyo Disneyland Entrance (9407118539).jpg](https://commons.wikimedia.org/wiki/File:Tokyo_Disneyland_Entrance_(9407118539).jpg)
 - **`tokyo-disneysea.png`**: Derived from [File:Tokyo DisneySea - Venice.jpg](https://commons.wikimedia.org/wiki/File:Tokyo_DisneySea_-_Venice.jpg)
-- **`universal-studios-japan.png`**: Derived from [File:USJ 5years.JPG](https://commons.wikimedia.org/wiki/File:USJ_5years.JPG)
+- **`universal-studios-japan.png`**, **`universal-studios-japan-2.png`**, **`universal-studios-japan-3.png`**, **`universal-studios-japan-4.png`**: User-provided reference photos of Universal Studios Japan (carousel on July 1–2).
+- **`universal-citywalk-osaka.png`**: Copy of the prior Wikimedia-derived USJ entrance image—used only for the June 30 CityWalk card (single slide). Originally derived from [File:USJ 5years.JPG](https://commons.wikimedia.org/wiki/File:USJ_5years.JPG).
 - **`meiji-shrine.png`**: Derived from [File:Torii Gate at Meiji Jingu Shrine, Tokyo (50125273602).jpg](https://commons.wikimedia.org/wiki/File:Torii_Gate_at_Meiji_Jingu_Shrine,_Tokyo_(50125273602).jpg)
 - **`sensoji-asakusa.png`**: Derived from [File:Senso-ji Kaminarimon 201503b.jpg](https://commons.wikimedia.org/wiki/File:Senso-ji_Kaminarimon_201503b.jpg)
 - **`shibuya-crossing.png`**: Derived from [File:Tokyo Shibuya Scramble Crossing 2018-10-09.jpg](https://commons.wikimedia.org/wiki/File:Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg)
